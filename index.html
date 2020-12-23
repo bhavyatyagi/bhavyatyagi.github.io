@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Bhavya's Blog</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="shortcut icon" href="https://lh4.googleusercontent.com/cpxI8RDOWt6cuhVZAygZnzLU2ocxjywhbFGr3tMtd-87SQ854912ytJkimWdANy9m0Nzp90=w16383">
   <script src="https://kit.fontawesome.com/49a924637f.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link href="https://twbs.github.io/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
+    <div id="loader" class="overlay-loader">
+  <div class="loader-background color-flip"></div>
+  <img class="loader-icon spinning-cog" src="assets/cog11.svg">
+</div>
     <header>
       <nav id="navbar">
         <ul class="horizontal-lists text-center">
@@ -35,11 +42,11 @@
           <h1 id="firstname"> &nbspBhavya</h1> <h1 id="lastname">&nbspTyagi</h1>
     </div>
       <ul class="social text-center slowitdown">
-        <li><a href="#"><i class="fab fa-linkedin-in"></i> </a></li>
-        <li><a href="#"><i class="fas fa-code slowitdown "></i></a></li>
-        <li><a href="#"><i class="fab fa-google-plus-g slowitdown "></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-f slowitdown "></i></a></li>
-        <li><a href="#"><i class="fab fa-quora slowitdown "></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/bhavya-tyagi-443619149/"><i class="fab fa-linkedin-in"></i> </a></li>
+        <li><a target="_blank" href="https://www.codechef.com/users/bhavyatyagi16"><i class="fas fa-code slowitdown "></i></a></li>
+        <li><a target="_blank" href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope slowitdown "></i></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/bhavytyagi16"><i class="fab fa-facebook-f slowitdown "></i></a></li>
+        <li><a target="_blank" href="https://www.quora.com/profile/Bhavya-Tyagi-36"><i class="fab fa-quora slowitdown "></i></a></li>
 
       </ul>
     </header>
@@ -74,5 +81,10 @@
 
       </section>
     </main>
+    <script>
+      $(window).on("load",function(){
+        $(".overlay-loader").fadeOut("slow");
+      });
+    </script>
   </body>
 </html>
