@@ -176,6 +176,10 @@ nav{
     /* position: relative; */
 
 }
+.nav-content{
+  margin: 35px auto;
+  padding: 20px auto;
+}
 .horizontal-lists{
   list-style: none;
   padding-left: 0;
@@ -213,26 +217,29 @@ header h1{
 #lastname
 {
   transition: color 0.35s;
-  font-size: 75px;
+  font-size: 85px;
 }
 #firstname{
   color: white;
   font-weight: lighter;
-  font-size: 70px;
+  font-size: 80px;
 }
 #lastname:hover{
   color:darkslategrey;
 }
 .name{
-  margin: 0;
+
   letter-spacing: 1.2px;
   font-family: 'Alex Brush', cursive;
   font-weight: bold;
+
+  margin: auto;
 }
 
 /* Social-Handles */
 ul.social{
   margin-top: 0;
+  margin: auto;
 }
 .social li{
   display: inline;
@@ -266,6 +273,41 @@ ul.social{
 .fa-code:hover{
   color: #ece9d8;
 }
+
+/* Section Classes */
+
+section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+section:nth-child(2n+3)
+{
+  background-color: white;
+}
+section:nth-child(2n)
+{
+  background-color: rgb(193 214 216 / 0.3) ;
+}
+
+.section-heading{
+  width: auto;
+  padding: 20px 10px 10px;
+  font-weight: 400;
+
+}
+.section-heading span{
+  font-size: 30px;
+  color: darkslategrey;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: bold;
+
+}
 /* About Section */
 
 #about{
@@ -277,7 +319,7 @@ ul.social{
 .myimage
 {
   margin: auto;
-  margin-top: -17vh;
+  margin-top: -23vh;
   width: 12rem;
   height: 12rem;
 }
@@ -290,20 +332,274 @@ ul.social{
   box-shadow: 0px 0px 6px 5px lightgrey;
 }
 #about p{
-  padding: 0 250px 0 250px;
-  line-height: 1.2;
+
   word-spacing: 1.2;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1.2px;
+
+  padding: 10px;
+  width: 70%;
+  text-align: justify;
+  line-height: 28px;
+  font-size: 1.1rem;
+  margin: auto;
 }
-#heading{
+p#heading{
   text-transform: uppercase;
   word-spacing: 2px;
   font-weight: bold;
-  color: black;
+  color: darkslategrey;
+  text-align: center;
 }
-#intro{
-  word-spacing: 1.5;
+p#intro{
+  letter-spacing: normal;
   font-weight: 300;
-  color: darkslategrey
+  font-size: 1rem;
+  color: lightslategrey;
+}
+
+
+/* Skills Section */
+
+.mb75px{
+  margin-bottom: 30px;
+}
+.skills-display{
+  width: 70%;
+  /* heght: 100px;
+  border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 0 40px 0;
+}
+.skills-progress
+{
+  width: 10rem;
+  height: 2rem;
+  background-color: lightgrey;
+  border-radius: 0.8rem;
+  margin: 25px;
+  box-shadow: 1px 1px 4px 1.5px lightgrey inset;
+}
+.skills-progress>div{
+  border-radius: 20px 0 0 20px;
+  box-shadow: 6px 0px 5px -0.6px #a5cacd;
+}
+.mb-blue{
+  background-color: lightslategrey;
+}
+.skills-name{
+  padding-top: 4px;
+}
+.skills-name span{
+  font-size: 1.15rem;
+  color: white;
+  font-family: 'Montserrat',sans-serif;
+  margin-left: 15px;
+
+}
+/* Percentage Classes */
+.eighty-five-percent{
+  width: 85%;
+  height: inherit;
+}
+.html-percent{
+  width: 75%;
+  height: inherit;
+  background-color: blue;
+}
+.css-percent{
+  width: 70%;
+  height: inherit;
+  background-color: red;
+}
+.JavaScript-percent{
+  width: 55%;
+  height: inherit;
+  background-color: yellow;
+}
+.JQuery-percent{
+  width: 55%;
+  height: inherit;
+  background-color: lightgreen;
+}
+.Node-JS-percent{
+  width: 55%;
+  height: inherit;
+  background-color: orange;
+}
+.bootstrap-percent{
+  width: 55%;
+  height: inherit;
+  background-color: darkgreen;
+}
+.mongo-percent{
+  width: 55%;
+  height: inherit;
+  background-color: purple;
+}
+.git-percent{
+  width: 55%;
+  height: inherit;
+  background-color: darkblue;
+}
+.linux-percent{
+  width: 55%;
+  height: inherit;
+  background-color: lightblue;
+}
+.ve-percent{
+  width: 55%;
+  height: inherit;
+  background-color: skyblue;
+}
+.blog-percent{
+  width: 55%;
+  height: inherit;
+  background-color: darkorange;
+}
+
+/* Portfolio-Section */
+
+.portfolio-display
+{
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 0 40px 0;
+  padding: 0 40px;
+}
+.portfolio-images{
+  max-width: 300px;
+  overflow: hidden;
+  width: 75%;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.portfolio-images img{
+  width: 300px;
+}
+.portfolio-text{
+  transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+.portfolio-images:hover{
+  box-shadow: 0 0 50px #a5cacd;
+}
+.portfolio-images:hover .portfolio-text{
+  color:white;
+  background-color: #80808078;
+}
+
+/* Contact-Section */
+.form{
+  width: 50%;
+}
+.footer-social ul li
+{
+  color:white;
+}
+#contact{
+  background: linear-gradient(to top right,  #a5cacd, darkslategrey);
+}
+.contact-heading span
+{
+  color:white;
+}
+.contact-display{
+  display: flex;
+  margin-bottom: 40px;
+}
+.form input,textarea{
+  max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    color: #d9dcdd;
+    background: transparent;
+    width: 80%;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-left: 50px;
+}
+.form button{
+  background: transparent;
+    font-size: 0.95rem;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 2px;
+    color: white;
+    font-weight: 700;
+   letter-spacing: 0.046875em;
+   line-height: 1;
+   padding: 0.8em 0.8em 0.78em;
+
+}
+.form button:hover {
+    background: white;
+    color: black;
+}
+.form textarea, .form input,.Where p span, .form i, p{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+.contact-headings{
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+.form button{
+  display: block;
+  text-align: center;
+}
+.add-info
+{
+  width: 35%;
+  margin-left: 6%;
+}
+
+
+/* Footer */
+footer{
+
+    background-color: rgb(193 214 216 / 0.3);
+}
+.footer-social{
+  padding: 25px 0 5px 0;
+
+}
+.footer-social ul li i{
+  color: #7ea2a4;
+}
+.goodbye h3{
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-weight: bold;
+  text-align: center;
+  color: darkslategrey;
+  padding: 0px 0 15px 0;
+  margin: 0;
+  margin-left: 35px;
+  font-size: 30px;
+}
+#heart{
+  transition: color 0.35s;
+}
+#heart:hover{
+  color:red;
 }
