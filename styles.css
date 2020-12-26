@@ -289,7 +289,9 @@ section:nth-child(2n+3)
 }
 section:nth-child(2n)
 {
-  background-color: rgb(193 214 216 / 0.3) ;
+  /* background-color: rgb(193 214 216 / 0.3) ; */
+  background-image: linear-gradient(to top right,white,rgb(193 214 216 / 0.3)) ;
+
 }
 
 .section-heading{
@@ -362,7 +364,7 @@ p#intro{
 /* Skills Section */
 
 .mb75px{
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .skills-display{
   width: 70%;
@@ -420,49 +422,49 @@ p#intro{
   background-color: yellow;
 }
 .JQuery-percent{
-  width: 55%;
+  width: 45%;
   height: inherit;
   background-color: lightgreen;
 }
 .Node-JS-percent{
-  width: 55%;
+  width: 35%;
   height: inherit;
   background-color: orange;
 }
 .bootstrap-percent{
-  width: 55%;
+  width: 65%;
   height: inherit;
   background-color: darkgreen;
 }
 .mongo-percent{
-  width: 55%;
+  width: 45%;
   height: inherit;
   background-color: purple;
 }
 .git-percent{
-  width: 55%;
+  width: 75%;
   height: inherit;
   background-color: darkblue;
 }
 .linux-percent{
-  width: 55%;
+  width: 70%;
   height: inherit;
   background-color: lightblue;
 }
 .ve-percent{
-  width: 55%;
+  width: 75%;
   height: inherit;
   background-color: skyblue;
 }
 .blog-percent{
-  width: 55%;
+  width: 75%;
   height: inherit;
   background-color: darkorange;
 }
 
-/* Portfolio-Section */
+/* projects-Section */
 
-.portfolio-display
+.projects-display
 {
   box-sizing: border-box;
 
@@ -473,7 +475,7 @@ p#intro{
   margin: 0 0 40px 0;
   padding: 0 40px;
 }
-.portfolio-images{
+.projects-images{
   max-width: 300px;
   overflow: hidden;
   width: 75%;
@@ -482,10 +484,10 @@ p#intro{
     background-repeat: no-repeat;
     position: relative;
 }
-.portfolio-images img{
+.projects-images img{
   width: 300px;
 }
-.portfolio-text{
+.projects-text{
   transition: all 0.5s ease-in-out;
     position: absolute;
     top: 0;
@@ -495,12 +497,175 @@ p#intro{
     text-align: center;
     padding: 10px;
 }
-.portfolio-images:hover{
+.projects-images:hover{
   box-shadow: 0 0 50px #a5cacd;
 }
-.portfolio-images:hover .portfolio-text{
+.projects-images:hover .projects-text{
   color:white;
   background-color: #80808078;
+}
+
+/* Work Experience */
+/* Timeline */
+
+.timeline{
+  position: relative;
+  width: 75%;
+  /* border: 2px solid black; */
+  margin-bottom: 50px;
+}
+
+.timeline-box{
+  position: relative;
+  margin: 5px;
+  width: 40%;
+  left: 5%;
+  min-height: 150px;
+  /* border: 2px solid black; */
+  text-align: right;
+  padding: 5px;
+}
+.timeline-box:nth-child(2n)
+{
+  left: 53%;
+}
+.timeline-box:nth-child(2n+1)::after{
+  content: '';
+  position: absolute;
+  top: 35%;
+  border-radius: 50%;
+  right: -8.7%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #a5cacd;
+  z-index: 2;
+
+}
+.timeline-box:nth-child(2n)::after{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  top: 35%;
+  left: -10.3%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #a5cacd;
+  z-index: 2;
+}
+.timeline-divider{
+  position: absolute;
+  height: 49%;
+  width: 0;
+  border: 1.5px dashed #a5cacd;
+  top: 20%;
+  left: 49.59%;
+  /* overflow: hidden; */
+}
+.timeline-traveller{
+
+  top: 40%;
+display: block;
+  position: sticky;
+  transform: rotate(90deg);
+  z-index: 3;
+}
+.timeline-traveller i{
+  color: darkslategrey;
+  display: block;
+  margin-left: -35px;
+  margin-top: 30px;
+}
+
+/* Education-Section */
+.education-display{
+  position: relative;
+  width: 75%;
+  /* border: 2px solid black; */
+  margin-bottom: 50px;
+}
+.education-box{
+  position: relative;
+  margin: 5px;
+  width: 40%;
+  left: 5%;
+  min-height: 150px;
+  /* border: 2px solid black; */
+  text-align: right;
+  padding: 5px;
+}
+.education-box::after{
+  content: '';
+  border-radius: 50%;
+  top: 37%;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #a5cacd;
+  position: absolute;
+}
+.education-box:nth-child(2n+1)::after
+{
+  right:-9.75%;
+}
+.education-box:nth-child(2n)
+{
+  left: 53%;
+}
+.education-box:nth-child(2n)::after{
+  left: -9.4%;
+}
+
+.education-divider{
+  position: absolute;
+  border: 1.5px dashed #a5cacd;
+  height: 65%;
+  width: 0;
+  left: 50%;
+  top: 15%;
+}
+.education-traveller{
+  position: sticky;
+  top: 35%;
+  left: -20%;
+}
+.education-traveller i{
+  color: darkslategrey;
+  margin-left: -8.9px;
+}
+.education-logo{
+  position: absolute;
+  width: 50px;
+  overflow: hidden;
+}
+.education-logo >img{
+  width: 100%;
+}
+.designation, .institute, .duration, .description{
+  font-family: 'Montserrat', sans-serif;
+}
+.designation{
+  font-size: 1.6rem;
+  margin: 10px 5px 0 5px;
+  color: darkslategrey;
+}
+.institute{
+  margin: -2px 5px 0 5px;;
+  color: black;
+  font-weight: 400px;
+  font-size: 1.2rem;
+}
+.duration{
+  color: #9e9b9b;
+  margin: 3px 5px 5px 5px;
+  font-weight: 100;;
+  font-size: 1rem;
+}
+.description{
+  text-align: justify;
+  margin: 0 5px;
+  font-size: 14px;
+  padding: 2px;
+  color: grey;
+  line-height: 20px;
 }
 
 /* Contact-Section */
@@ -573,6 +738,11 @@ p#intro{
   margin-left: 6%;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
 
 /* Footer */
 footer{
@@ -603,3 +773,5 @@ footer{
 #heart:hover{
   color:red;
 }
+
+/* Additional CSS */
