@@ -1,796 +1,381 @@
-/* Loader */
-.overlay-loader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.overlay-loader .loader-background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #a5cacd;
-  -webkit-transition: background-color .2s 0s linear,right .2s .3s ease-out;
-  -moz-transition: background-color .2s 0s linear,right .2s .3s ease-out;
-  -ms-transition: background-color .2s 0s linear,right .2s .3s ease-out;
-  -o-transition: background-color .2s 0s linear,right .2s .3s ease-out;
-  transition: background-color .2s 0s linear,right .2s .3s ease-out;
-}
-
-.overlay-loader .loader-background.color-flip {
-  -webkit-animation: color-flip 6.5s .6s infinite linear;
-  -moz-animation: color-flip 6.5s .6s infinite linear;
-  -ms-animation: color-flip 6.5s .6s infinite linear;
-  -o-animation: color-flip 6.5s .6s infinite linear;
-  animation: color-flip 6.5s .6s infinite linear;
-}
-
-@-webkit-keyframes color-flip {
-  0% { background-color: darkslategrey }
-  18% { background-color: darkslategrey }
-  20% { background-color: #a77dc2 }
-  38% { background-color: #a77dc2 }
-  40% { background-color: #4aa8d8 }
-  58% { background-color: #4aa8d8 }
-  60% { background-color: #56bc8a }
-  78% { background-color: #56bc8a }
-  80% { background-color: #d95e40 }
-  98% { background-color: #d95e40 }
-  100% { background-color: darkslategrey }
-}
-
-@-moz-keyframes color-flip {
-  0% { background-color: darkslategrey }
-  18% { background-color: darkslategrey }
-  20% { background-color: #a77dc2 }
-  38% { background-color: #a77dc2 }
-  40% { background-color: #4aa8d8 }
-  58% { background-color: #4aa8d8 }
-  60% { background-color: #56bc8a }
-  78% { background-color: #56bc8a }
-  80% { background-color: #d95e40 }
-  98% { background-color: #d95e40 }
-  100% { background-color: darkslategrey }
-}
-@-o-keyframes color-flip{
-  0% { background-color: darkslategrey }
-  18% { background-color: darkslategrey }
-  20% { background-color: #a77dc2 }
-  38% { background-color: #a77dc2 }
-  40% { background-color: #4aa8d8 }
-  58% { background-color: #4aa8d8 }
-  60% { background-color: #56bc8a }
-  78% { background-color: #56bc8a }
-  80% { background-color: #d95e40 }
-  98% { background-color: #d95e40 }
-  100% { background-color: darkslategrey }
-}
-
-@keyframes color-flip {
-  0% { background-color: darkslategrey }
-  18% { background-color: darkslategrey }
-  20% { background-color: #a77dc2 }
-  38% { background-color: #a77dc2 }
-  40% { background-color: #4aa8d8 }
-  58% { background-color: #4aa8d8 }
-  60% { background-color: #56bc8a }
-  78% { background-color: #56bc8a }
-  80% { background-color: #d95e40 }
-  98% { background-color: #d95e40 }
-  100% { background-color: darkslategrey }
-}
-
-.overlay-loader .loader-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -48px 0 0 -48px;
-  font-size: 96px;
-  color: #FFF;
-}
-
-.overlay-loader .loader-icon.spinning-cog {
-  -webkit-animation: spinning-cog 1.3s infinite ease;
-  -moz-animation: spinning-cog 1.3s infinite ease;
-  -ms-animation: spinning-cog 1.3s infinite ease;
-  -o-animation: spinning-cog 1.3s infinite ease;
-  animation: spinning-cog 1.3s infinite ease;
-}
-
-@-webkit-keyframes spinning-cog {
-  0% { -webkit-transform: rotate(0deg) }
-  20% { -webkit-transform: rotate(-45deg) }
-  100% { -webkit-transform: rotate(360deg) }
-}
-
-@-moz-keyframes spinning-cog {
-  0% { -moz-transform: rotate(0deg) }
-  20% { -moz-transform: rotate(-45deg) }
-  100% { -moz-transform: rotate(360deg) }
-}
-
-@-o-keyframes spinning-cog {
-  0% { -o-transform: rotate(0deg) }
-  20% { -o-transform: rotate(-45deg) }
-  100% { -o-transform: rotate(360deg) }
-}
-
-@keyframes spinning-cog {
-  0% { transform: rotate(0deg) }
-  20% { transform: rotate(-45deg) }
-  100% { transform: rotate(360deg) }
-}
-
-@-webkit-keyframes shrinking-cog {
-  0% { -webkit-transform: scale(1) }
-  20% { -webkit-transform: scale(1.2) }
-  100% { -webkit-transform: scale(0) }
-}
-
-@-moz-keyframes shrinking-cog {
-  0% { -moz-transform: scale(1) }
-  20% { -moz-transform: scale(1.2) }
-  100% { -moz-transform: scale(0) }
-}
-
-@-o-keyframes shrinking-cog {
-  0% { -o-transform: scale(1) }
-  20% { -o-transform: scale(1.2) }
-  100% { -o-transform: scale(0) }
-}
-
-@keyframes shrinking-cog {
-  0% { transform: scale(1) }
-  20% { transform: scale(1.2) }
-  100% { transform: scale(0) }
-}
-
-.overlay-loader .loader-icon.shrinking-cog {
-  -webkit-animation: shrinking-cog .3s 1 ease forwards;
-  -moz-animation: shrinking-cog .3s 1 ease forwards;
-  -ms-animation: shrinking-cog .3s 1 ease forwards;
-  -o-animation: shrinking-cog .3s 1 ease forwards;
-  animation: shrinking-cog .3s 1 ease forwards;
-}
-/* Body */
-body{
-  margin: 0;
-}
-/* Body-Header */
-header{
-  opacity: 0.65;
-  background-image: url(assets/background.jpg);
-  height: 65vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-/* Horizontal Lists */
-nav{
-    background-color: rgb(193 214 216 / 0.3);
-    /* position: relative; */
-
-}
-.nav-content{
-  margin: 35px auto;
-  padding: 20px auto;
-}
-.horizontal-lists{
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-
-}
-
-.horizontal-lists li{
-  display: inline-block;
-  margin: 35px 16px 35px 16px;
-}
-
-.horizontal-lists li a:hover{
-  color: lightslategrey;
-  border-bottom: 1px solid #a5cacd;
-}
-.horizontal-lists li a{
-  text-decoration: none;
-  color: white;
-  letter-spacing: 1.7px;
-  font-family: 'Montserrat', sans-serif;
-  transition: color 0.5s,border-bottom 40s;
-}
-.text-center{
-  text-align: center;
-}
-
-/* Name */
-header h1{
-  display: inline-block;
-  font-size: 50px;
-
-  margin: 0;
-}
-#lastname
-{
-  transition: color 0.35s;
-  font-size: 85px;
-}
-#firstname{
-  color: white;
-  font-weight: lighter;
-  font-size: 80px;
-}
-#lastname:hover{
-  color:darkslategrey;
-}
-.name{
-
-  letter-spacing: 1.2px;
-  font-family: 'Alex Brush', cursive;
-  font-weight: bold;
-
-  margin: auto;
-}
-
-/* Social-Handles */
-ul.social{
-  margin-top: 0;
-  margin: auto;
-}
-.social li{
-  display: inline;
-  margin: 0 12px 12px 12px;
-}
-.social li i{
-  width: 20px;
-  padding: 10px;
-  border-radius: 50%;
-  transition: color 0.35s, box-shadow 0.3s;
-  color: darkslategrey;
-}
-.social li i:hover{
-  box-shadow: 0px 0px 6px 4px lightslategrey;
-}
-.slowitdown{
-  transition: color 0.6s;
-}
-.fa-quora:hover{
-  color: #b32a26;
-}
-.fa-facebook-f:hover{
-  color: #1877f2;
-}
-.fa-envelope:hover{
-  color: #e94134;
-}
-.fa-linkedin-in:hover{
-  color: #0a66c2;
-}
-.fa-code:hover{
-  color: #ece9d8;
-}
-
-/* Section Classes */
-
-section{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-}
-section:nth-child(2n+3)
-{
-  background-color: white;
-}
-section:nth-child(2n)
-{
-  /* background-color: rgb(193 214 216 / 0.3) ; */
-  background-image: linear-gradient(to top right,white,rgb(193 214 216 / 0.3)) ;
-
-}
-
-.section-heading{
-  width: auto;
-  padding: 20px 10px 10px;
-  font-weight: 400;
-
-}
-.section-heading span{
-  font-size: 30px;
-  color: darkslategrey;
-  display: inline-block;
-  padding-top: 10px;
-  margin-right: 0.5rem;
-  font-family: 'Montserrat',sans-serif;
-  font-weight: bold;
-
-}
-/* About Section */
-
-#about{
-
-  height: auto;
-  width: 100%;
-  position: relative;
-}
-.myimage
-{
-  margin: auto;
-  margin-top: -23vh;
-  width: 12rem;
-  height: 12rem;
-}
-
-.myimage img{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  opacity: 0.89;
-  box-shadow: 0px 0px 6px 5px lightgrey;
-}
-#about p{
-
-  word-spacing: 1.2;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1.2px;
-
-  padding: 10px;
-  width: 70%;
-  text-align: justify;
-  line-height: 28px;
-  font-size: 1.1rem;
-  margin: auto;
-}
-p#heading{
-  text-transform: uppercase;
-  word-spacing: 2px;
-  font-weight: bold;
-  color: darkslategrey;
-  text-align: center;
-}
-p#intro{
-  letter-spacing: normal;
-  font-weight: 300;
-  font-size: 1rem;
-  color: lightslategrey;
-}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bhavya's Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <meta name="viewport" content="Width=device-width, initial-scale=1"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="https://lh4.googleusercontent.com/cpxI8RDOWt6cuhVZAygZnzLU2ocxjywhbFGr3tMtd-87SQ854912ytJkimWdANy9m0Nzp90=w16383">
+  <script src="https://kit.fontawesome.com/49a924637f.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link href="https://twbs.github.io/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="loader" class="overlay-loader">
+  <div class="loader-background color-flip"></div>
+  <img class="loader-icon spinning-cog" src="assets/cog11.svg">
+</div>
+    <header>
+      <nav id="navbar">
+        <ul class="horizontal-lists text-center">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- <br><br> -->
+    <div class="nav-content">
+      <div class="name text-center">
 
 
-/* Skills Section */
+            <h1 id="firstname"> &nbspBhavya</h1> <h1 id="lastname">&nbspTyagi</h1>
+      </div>
+        <ul class="social text-center slowitdown">
+          <li><a target="_blank" href="https://www.linkedin.com/in/bhavya-tyagi-443619149/"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a target="_blank" href="https://www.codechef.com/users/bhavyatyagi16"><i class="fas fa-code slowitdown "></i></a></li>
+          <li><a target="_blank" href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope slowitdown "></i></a></li>
+          <li><a target="_blank" href="https://www.facebook.com/bhavytyagi16"><i class="fab fa-facebook-f slowitdown "></i></a></li>
+          <li><a target="_blank" href="https://www.quora.com/profile/Bhavya-Tyagi-36"><i class="fab fa-quora slowitdown "></i></a></li>
 
-.mb75px{
-  margin-bottom: 50px;
-}
-.skills-display{
-  width: 70%;
-  /* heght: 100px;
-  border: 2px solid black; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 0 40px 0;
-}
-.skills-progress
-{
-  width: 10rem;
-  height: 2rem;
-  background-color: lightgrey;
-  border-radius: 0.8rem;
-  margin: 25px;
-  box-shadow: 1px 1px 4px 1.5px lightgrey inset;
-}
-.skills-progress>div{
-  border-radius: 20px 0 0 20px;
-  box-shadow: 6px 0px 5px -0.6px #a5cacd;
-}
-.mb-blue{
-  background-color: lightslategrey;
-}
-.skills-name{
-  padding-top: 4px;
-}
-.skills-name span{
-  font-size: 1.15rem;
-  color: white;
-  font-family: 'Montserrat',sans-serif;
-  margin-left: 15px;
+        </ul>
+    </div>
+    </header>
 
-}
-/* Percentage Classes */
-.eighty-five-percent{
-  width: 85%;
-  height: inherit;
-}
-.html-percent{
-  width: 75%;
-  height: inherit;
-  background-color: blue;
-}
-.css-percent{
-  width: 70%;
-  height: inherit;
-  background-color: red;
-}
-.JavaScript-percent{
-  width: 55%;
-  height: inherit;
-  background-color: yellow;
-}
-.JQuery-percent{
-  width: 45%;
-  height: inherit;
-  background-color: lightgreen;
-}
-.Node-JS-percent{
-  width: 35%;
-  height: inherit;
-  background-color: orange;
-}
-.bootstrap-percent{
-  width: 65%;
-  height: inherit;
-  background-color: darkgreen;
-}
-.mongo-percent{
-  width: 45%;
-  height: inherit;
-  background-color: purple;
-}
-.git-percent{
-  width: 75%;
-  height: inherit;
-  background-color: darkblue;
-}
-.linux-percent{
-  width: 70%;
-  height: inherit;
-  background-color: lightblue;
-}
-.ve-percent{
-  width: 75%;
-  height: inherit;
-  background-color: skyblue;
-}
-.blog-percent{
-  width: 75%;
-  height: inherit;
-  background-color: darkorange;
-}
+    <main>
 
-/* projects-Section */
+      <section id="about">
+        <div class="myimage">
+          <img src="assets/myimage1.jpg" alt="Profile Photo">
+        </div>
+        <div class="about-text text-center">
+          <p id="heading">Sophomore at TIET, Patiala | Computer Science & Engineering <br> TEAM MEMBER AT CREATIVE COMPUTING SOCIETY</p>
+          <p id="intro">
+            Hey visitor 🖐, I'm an Experienced Member who's Skilled in various technologies and tools. For the most part, I do Competitive Programming and build websites. I'm 3 🌟 on CodeChef and a budding Software Engineer. This web-portfolio is one of the first projects of my Web-Development Journey. I've operations proficiency and pursuing a Bachelor of Engineering - BE that is focused on Computer Science and Engineering from Thapar Institute of Engineering and Technology, Patiala
+          </p>
+        </div>
+      </section>
 
-.projects-display
-{
-  box-sizing: border-box;
+      <section id="skills">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-chalkboard-teacher"></i>
+          </span>
+          <span>SKILLS</span>
+        </h1>
+        <div class="skills-display">
+          <div class="skills-progress">
+            <div class="eighty-five-percent mb-blue">
+              <div class="skills-name">
+                <span>C/C++</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-progress">
+            <div class="html-percent">
+              <div class="skills-name">
+                <span>HTML5</span>
+              </div>
+            </div>
+          </div>
 
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0 0 40px 0;
-  padding: 0 40px;
-}
-.projects-images{
-  max-width: 300px;
-  overflow: hidden;
-  width: 75%;
-    margin: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.projects-images img{
-  width: 300px;
-}
-.projects-text{
-  transition: all 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    color: transparent;
-    text-align: center;
-    padding: 10px;
-}
-.projects-images:hover{
-  box-shadow: 0 0 50px #a5cacd;
-}
-.projects-images:hover .projects-text{
-  color:white;
-  background-color: #80808078;
-}
+          <div class="skills-progress">
+            <div class="css-percent">
+              <div class="skills-name">
+                <span>CSS</span>
+              </div>
+            </div>
+          </div>
 
-/* Work Experience */
-/* Timeline */
+          <div class="skills-progress">
+            <div class="JavaScript-percent">
+              <div class="skills-name">
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
 
-.timeline{
-  position: relative;
-  width: 75%;
-  /* border: 2px solid black; */
-  margin-bottom: 50px;
-}
+          <div class="skills-progress">
+            <div class="JQuery-percent">
+              <div class="skills-name">
+                <span>JQuery</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-progress">
+            <div class="Node-JS-percent">
+              <div class="skills-name">
+                <span>N-JS</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-progress">
+            <div class="bootstrap-percent">
+              <div class="skills-name">
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-progress">
+            <div class="mongo-percent">
+              <div class="skills-name">
+                <span>MongoDB</span>
+              </div>
 
-.timeline-box{
-  position: relative;
-  margin: 5px;
-  width: 40%;
-  left: 5%;
-  min-height: 150px;
-  /* border: 2px solid black; */
-  text-align: right;
-  padding: 5px;
-}
-.timeline-box:nth-child(2n)
-{
-  left: 53%;
-}
-.timeline-box:nth-child(2n+1)::after{
-  content: '';
-  position: absolute;
-  top: 35%;
-  border-radius: 50%;
-  right: -8.7%;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #a5cacd;
-  z-index: 2;
+        </div>
+      </div>
+      <div class="skills-progress">
+        <div class="git-percent">
+          <div class="skills-name">
+            <span>Git</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-progress">
+        <div class="linux-percent">
+          <div class="skills-name">
+            <span>Linux</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-progress">
+        <div class="ve-percent">
+          <div class="skills-name">
+            <span>VEdit</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-progress">
+        <div class="blog-percent">
+          <div class="skills-name">
+            <span>Blogging</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-}
-.timeline-box:nth-child(2n)::after{
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  top: 35%;
-  left: -10.3%;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #a5cacd;
-  z-index: 2;
-}
-.timeline-divider{
-  position: absolute;
-  height: 49%;
-  width: 0;
-  border: 1.5px dashed #a5cacd;
-  top: 20%;
-  left: 49.59%;
-  /* overflow: hidden; */
-}
+      </section>
+      <section id="experience">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-briefcase"></i>
+          </span>
+          <span>Work Experience</span>
+        </h1>
 
-@media screen and (max-width: 600px)
-{
-  .timeline-divider{
-    left: 5%;
-  }
-  .timeline-box{
-    left:12%;
-    width: 80%;
-  }
-  .timeline-box:nth-child(2n)
-  {
-    left: 11.5%;
-  }
-  .timeline-box:nth-child(2n+1)::after{
-    left: -11%;
-  }
-}
-.timeline-traveller{
+        <div class="timeline">
+          <div class="timeline-box">
+            <div class="education-logo">
+              <img src="assets/luglogo.png" alt="">
+            </div>
+            <div class="box-details">
+              <h3 class="designation">Core Member</h3>
+              <h4 class="institute">Linux User Group</h4>
+              <h5 class="duration">(07/2020-Present)</h5>
+              <p class="description">Project-Based Society in Thapar Institute of Engineering and Technology, Patiala</p>
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="education-logo">
+              <img src="assets/ccslogo.png" alt="">
+            </div>
+            <div class="box-details">
+              <h3 class="designation">Team Member</h3>
+              <h4 class="institute">Creative Computing Society</h4>
+              <h5 class="duration">(07/2019-Present)</h5>
+              <p class="description">Technical Society in Thapar Institute of Engineering and Technology, Patiala</p>
+            </div>
+          </div>
 
-  top: 40%;
-display: block;
-  position: sticky;
-  transform: rotate(90deg);
-  z-index: 3;
-}
-.timeline-traveller i{
-  color: darkslategrey;
-  display: block;
-  margin-left: -35px;
-  margin-top: 30px;
-}
+          <div class="timeline-divider">
+            <div class="timeline-traveller">
+              <i class="fas fa-fighter-jet fa-lg"></i>
+            </div>
+          </div>
+        </div>
 
-/* Education-Section */
-.education-display{
-  position: relative;
-  width: 75%;
-  /* border: 2px solid black; */
-  margin-bottom: 50px;
-}
-.education-box{
-  position: relative;
-  margin: 5px;
-  width: 40%;
-  left: 5%;
-  min-height: 150px;
-  /* border: 2px solid black; */
-  text-align: right;
-  padding: 5px;
-}
-.education-box::after{
-  content: '';
-  border-radius: 50%;
-  top: 37%;
-  height: 0.5rem;
-  width: 0.5rem;
-  background-color: #a5cacd;
-  position: absolute;
-}
-.education-box:nth-child(2n+1)::after
-{
-  right:-9.75%;
-}
-.education-box:nth-child(2n)
-{
-  left: 53%;
-}
-.education-box:nth-child(2n)::after{
-  left: -9.4%;
-}
+      </section>
+      <section id="education">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-graduation-cap"></i>
+          </span>
+          <span>Education</span>
+        </h1>
 
-.education-divider{
-  position: absolute;
-  border: 1.5px dashed #a5cacd;
-  height: 65%;
-  width: 0;
-  left: 50%;
-  top: 15%;
+        <div class="education-display">
+          <div class="education-box">
+            <div class="education-logo">
+              <img src="assets/tietlogo.png" alt="">
+            </div>
+            <div class="box-details">
+              <h3 class="designation">Computer Science</h3>
+              <h4 class="institute">Thapar Institute</h4>
+              <h5 class="duration">10 CGPA | (07/2019-Present)</h5>
+              <p class="description">Bachelor of Engineering - BE focused in Computer Science and Engineering from Thapar Institute of Engineering and Technology, Patiala</p>
+            </div>
+          </div>
+          <div class="education-box">
+            <div class="education-logo">
+              <img src="assets/rpvvlogo.png" alt="">
+            </div>
+            <div class="box-details">
+              <h3 class="designation">Senior Secondary</h3>
+              <h4 class="institute">RPVV SMV Delhi</h4>
+              <h5 class="duration">93.8% | (2018-2019)</h5>
+              <p class="description">Science Non-Medical stream with Economics (97%) and PCM 95.3% from Rajkiya Pratibha Vikas Vidyalaya, Surajmal Vihar Delhi</p>
+            </div>
+          </div>
+          <div class="education-box">
+            <div class="education-logo">
+              <img src="assets/rpvvlogo.png" alt="">
+            </div>
+            <div class="box-details">
+              <h3 class="designation">Secondary</h3>
+              <h4 class="institute">RPVV SMV Delhi</h4>
+              <h5 class="duration">10 CGPA | (2016-2017)</h5>
+              <p class="description">Secured Merit Certificate in 10th from Rajkiya Pratibha Vikas Vidyalaya, Surajmal Vihar Delhi</p>
+            </div>
+          </div>
 
-}
-.education-traveller{
-  position: sticky;
-  top: 35%;
-  left: -20%;
-}
-.education-traveller i{
-  color: darkslategrey;
-  margin-left: -8.9px;
-}
-.education-logo{
-  position: absolute;
-  width: 50px;
-  overflow: hidden;
-}
-.education-logo >img{
-  width: 100%;
-}
-.designation, .institute, .duration, .description{
-  font-family: 'Montserrat', sans-serif;
-}
-.designation{
-  font-size: 1.6rem;
-  margin: 10px 5px 0 5px;
-  color: darkslategrey;
-}
-.institute{
-  margin: -2px 5px 0 5px;;
-  color: black;
-  font-weight: 400px;
-  font-size: 1.2rem;
-}
-.duration{
-  color: #9e9b9b;
-  margin: 3px 5px 5px 5px;
-  font-weight: 100;;
-  font-size: 1rem;
-}
-.description{
-  text-align: justify;
-  margin: 0 5px;
-  font-size: 14px;
-  padding: 2px;
-  color: grey;
-  line-height: 20px;
-}
+          <div class="education-divider">
+            <div class="education-traveller">
+              <i class="fas fa-train fa-lg"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-microchip"></i>
+          </span>
+          <span>Projects</span>
+        </h1>
 
-/* Contact-Section */
-.form{
-  width: 50%;
-}
-.footer-social ul li
-{
-  color:white;
-}
-#contact{
-  background: linear-gradient(to top right,  #a5cacd, darkslategrey);
-}
-.contact-heading span
-{
-  color:white;
-}
-.contact-display{
-  display: flex;
-  margin-bottom: 40px;
-}
-.form input,textarea{
-  max-width: 90%;
-    margin: 15px;
-    padding: 4px 10px;
-    border: 0px solid transparent;
-    border-bottom: 2px solid white;
-    color: #d9dcdd;
-    background: transparent;
-    width: 80%;
-    line-height: 1.6;
-    font-size: 1.05rem;
-    margin-left: 50px;
-}
-.form button{
-  background: transparent;
-    font-size: 0.95rem;
-    border: 2px solid white;
-    margin-top: 5%;
-    margin-left: 35%;
-    border-radius: 2px;
-    color: white;
-    font-weight: 700;
-   letter-spacing: 0.046875em;
-   line-height: 1;
-   padding: 0.8em 0.8em 0.78em;
+        <div class="projects-display">
+          <div class="projects-images">
+              <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png" alt="">
+            <div class="projects-text">
+                Sample projects Text is Here. Welcome to My projects.
+            </div>
+          </div>
+          <div class="projects-images">
+              <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png" alt="">
+            <div class="projects-text">
+Sample projects Text is Here. Welcome to My projects.
+            </div>
+          </div>
+          <div class="projects-images">
+              <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png" alt="">
+            <div class="projects-text">
+Sample projects Text is Here. Welcome to My projects.
+            </div>
+          </div>
 
-}
-.form button:hover {
-    background: white;
-    color: black;
-}
-.form textarea, .form input,.Where p span, .form i, p{
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-.contact-headings{
-  text-transform: uppercase;
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bolder;
-}
-.form button{
-  display: block;
-  text-align: center;
-}
-.add-info
-{
-  width: 35%;
-  margin-left: 6%;
-}
+          <div class="projects-images">
+            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png" alt="">
+            <div class="projects-text">
+                        Sample projects Text is Here. Welcome to My projects.
+            </div>
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-}
+          </div>
+          <div class="projects-images">
+            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png" alt="">
+            <div class="projects-text">
+Sample projects Text is Here. Welcome to My projects.
+            </div>
+          </div>
+          <div class="projects-images">
+            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png" alt="">
+            <div class="projects-text">
+Sample projects Text is Here. Welcome to My projects.
+            </div>
+          </div>
+          </div>
 
-/* Footer */
-footer{
+      </section>
+      <section id="contact">
+        <h1 class="contact-heading section-heading mb75px ">
+          <span>
+            <i><i class="fas fa-id-card"></i></i>
+          </span>
+          <span>Contact</span>
+        </h1>
+        <div class="contact-display">
+          <div class="form">
+            <form class="" action="index.html" method="post">
+              <input type="text" name="" placeholder="Full Name *" required>
+              <input type="text" name="" placeholder="Email *" required>
+              <textarea placeholder="Any Message ?" name="name" ></textarea>
+              <button type="submit" name="button">SEND MESSAGE</button>
+            </form>
+          </div>
+          <div class="add-info">
+              <div class="touch">
+                <h3 class="contact-headings">Get in Touch</h3>
+                <p>
+                  You can contact me through social media or through the options given below.
+                </p>
+              </div>
+              <div class="Where">
+                <h3 class="contact-headings">Where can you find me ?</h3>
+                <p>
+                  <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                  <span>Delhi, India</span>
+                </p>
+                <p>
+                  <span>
+                    <i class="fas fa-mobile-alt"></i>
+                  </span>
+                  <span>8908900070</span>
+                </p>
+                <p>
+                  <span>
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>bhavyatyagi16@gmail.com</span>
+                </p>
+              </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-social">
 
-    background-color: rgb(193 214 216 / 0.3);
-}
-.footer-social{
-  padding: 25px 0 5px 0;
 
-}
-.footer-social ul li i{
-  color: #7ea2a4;
-}
-.goodbye h3{
-  letter-spacing: 2px;
-  font-family: 'Alex Brush', cursive;
-  font-weight: bold;
-  text-align: center;
-  color: darkslategrey;
-  padding: 0px 0 15px 0;
-  margin: 0;
-  margin-left: 35px;
-  font-size: 30px;
-}
-#heart{
-  transition: color 0.35s;
-}
-#heart:hover{
-  color:red;
-}
+          <ul class="social text-center slowitdown">
+            <li><a target="_blank" href="https://www.linkedin.com/in/bhavya-tyagi-443619149/"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a target="_blank" href="https://www.codechef.com/users/bhavyatyagi16"><i class="fas fa-code slowitdown "></i></a></li>
+            <li><a target="_blank" href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope slowitdown "></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/bhavytyagi16"><i class="fab fa-facebook-f slowitdown "></i></a></li>
+            <li><a target="_blank" href="https://www.quora.com/profile/Bhavya-Tyagi-36"><i class="fab fa-quora slowitdown "></i></a></li>
 
-/* Additional CSS */
+          </ul>
+      </div>
+      <div class="goodbye">
+        <h3>Made with <span id="heart">❤</span> by Bhavya Tyagi</h3>
+      </div>
+      </footer>
+    </main>
+    <script>
+      $(window).on("load",function(){
+        $(".overlay-loader").fadeOut("slow");
+      });
+    </script>
+  </body>
+</html>
