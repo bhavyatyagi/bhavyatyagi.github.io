@@ -561,6 +561,24 @@ p#intro{
   left: 49.59%;
   /* overflow: hidden; */
 }
+
+@media screen and (max-width: 600px)
+{
+  .timeline-divider{
+    left: 5%;
+  }
+  .timeline-box{
+    left:12%;
+    width: 80%;
+  }
+  .timeline-box:nth-child(2n)
+  {
+    left: 11.5%;
+  }
+  .timeline-box:nth-child(2n+1)::after{
+    left: -11%;
+  }
+}
 .timeline-traveller{
 
   top: 40%;
@@ -621,6 +639,7 @@ display: block;
   width: 0;
   left: 50%;
   top: 15%;
+
 }
 .education-traveller{
   position: sticky;
