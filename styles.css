@@ -170,6 +170,33 @@ header{
   background-position: center;
   background-attachment: fixed;
 }
+@media screen and (max-width: 399px)
+{
+  header{
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 600px)
+{
+  html{
+    width: 500px;
+  }
+  .myimage img{
+      margin-top: 3vh;
+  }
+  .education-logo{
+    margin: 10px;
+  }
+  div.timeline-box{
+    width: 340px;
+  }
+  .form input,textarea{
+    margin-left: 10% !important;
+  }
+  .form button{
+    margin-left: 23% !important;
+  }
+}
 /* Horizontal Lists */
 nav{
     background-color: rgb(193 214 216 / 0.3);
@@ -233,13 +260,14 @@ header h1{
   font-family: 'Alex Brush', cursive;
   font-weight: bold;
 
-  margin: auto;
+  margin-left: -30px;;
 }
 
 /* Social-Handles */
 ul.social{
   margin-top: 0;
   margin: auto;
+  padding-left: 10px;
 }
 .social li{
   display: inline;
@@ -293,7 +321,19 @@ section:nth-child(2n)
   background-image: linear-gradient(to top right,white,rgb(193 214 216 / 0.3)) ;
 
 }
-
+@media screen and (max-height: 600px)
+{
+  header{
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 600px)
+{
+  section:nth-child(2n)
+  {
+    width: 100%;
+  }
+}
 .section-heading{
   width: auto;
   padding: 20px 10px 10px;
@@ -327,6 +367,7 @@ section:nth-child(2n)
 }
 
 .myimage img{
+
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -352,6 +393,7 @@ p#heading{
   font-weight: bold;
   color: darkslategrey;
   text-align: center;
+  margin-top: 40px;
 }
 p#intro{
   letter-spacing: normal;
@@ -565,7 +607,7 @@ p#intro{
 @media screen and (max-width: 600px)
 {
   .timeline-divider{
-    left: 5%;
+    left: 4%;
   }
   .timeline-box{
     left:12%;
@@ -578,6 +620,7 @@ p#intro{
   .timeline-box:nth-child(2n+1)::after{
     left: -11%;
   }
+
 }
 .timeline-traveller{
 
@@ -657,6 +700,23 @@ display: block;
 }
 .education-logo >img{
   width: 100%;
+}
+@media screen and (max-width:600px)
+{
+  .education-divider{
+    left:4%;
+  }
+  .education-box{
+    left:12%;
+    width: 90%;
+  }
+  .education-box:nth-child(2n)
+  {
+    left: 11%;
+  }
+  .education-box:nth-child(2n+1)::after{
+    left: -11%;
+  }
 }
 .designation, .institute, .duration, .description{
   font-family: 'Montserrat', sans-serif;
@@ -776,15 +836,15 @@ footer{
   color: #7ea2a4;
 }
 .goodbye h3{
-  letter-spacing: 2px;
-  font-family: 'Alex Brush', cursive;
+  letter-spacing: normal;
+  font-family: "proxima-nova", sans-serif;
   font-weight: bold;
   text-align: center;
-  color: darkslategrey;
+  color: #d9d9d9;
   padding: 0px 0 15px 0;
   margin: 0;
-  margin-left: 35px;
-  font-size: 30px;
+
+  font-size: 14px;
 }
 #heart{
   transition: color 0.35s;
