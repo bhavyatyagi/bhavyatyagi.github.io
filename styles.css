@@ -170,12 +170,15 @@ header{
   background-position: center;
   background-attachment: fixed;
 }
+
 @media screen and (max-width: 399px)
 {
   header{
     height: 70vh;
   }
 }
+
+
 @media screen and (max-width: 600px)
 {
   html{
@@ -327,6 +330,7 @@ section:nth-child(2n)
     height: 80vh;
   }
 }
+
 @media screen and (max-width: 600px)
 {
   section:nth-child(2n)
@@ -716,6 +720,12 @@ display: block;
   }
   .education-box:nth-child(2n+1)::after{
     left: -11%;
+  }
+  p#heading{
+    width: 80% !important;
+  }
+  #intro{
+    width: 85% !important;
   }
 }
 .designation, .institute, .duration, .description{
