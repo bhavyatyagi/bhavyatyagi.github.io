@@ -176,13 +176,14 @@ header{
   header{
     height: 70vh;
   }
+
 }
 
 
 @media screen and (max-width: 600px)
 {
   html{
-    width: 500px;
+    width: 540px;
   }
   .myimage img{
       margin-top: 3vh;
@@ -338,6 +339,12 @@ section:nth-child(2n)
     width: 100%;
   }
 }
+@media screen and (min-width:900px)
+{
+  html{
+    width: 100%;
+  }
+}
 .section-heading{
   width: auto;
   padding: 20px 10px 10px;
@@ -455,17 +462,17 @@ p#intro{
 .html-percent{
   width: 75%;
   height: inherit;
-  background-color: blue;
+  background-color: #479c9d;
 }
 .css-percent{
   width: 70%;
   height: inherit;
-  background-color: red;
+  background-color: #3d7475;
 }
 .JavaScript-percent{
   width: 55%;
   height: inherit;
-  background-color: yellow;
+  background-color: #6eb5aa;
 }
 .JQuery-percent{
   width: 45%;
@@ -475,7 +482,7 @@ p#intro{
 .Node-JS-percent{
   width: 35%;
   height: inherit;
-  background-color: orange;
+  background-color: #8c97c8;
 }
 .bootstrap-percent{
   width: 65%;
@@ -505,7 +512,7 @@ p#intro{
 .blog-percent{
   width: 75%;
   height: inherit;
-  background-color: darkorange;
+  background-color: #819a78;
 }
 
 /* projects-Section */
@@ -518,7 +525,7 @@ p#intro{
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 0 40px 0;
+  margin: 0 0 80px 0;
   padding: 0 40px;
 }
 .projects-images{
@@ -775,6 +782,7 @@ display: block;
 .contact-display{
   display: flex;
   margin-bottom: 40px;
+  height: 50vh;
 }
 .form input,textarea{
   max-width: 90%;
