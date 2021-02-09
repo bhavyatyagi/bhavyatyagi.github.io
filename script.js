@@ -75,6 +75,7 @@ function scrollVertically(targetSection){
 //
 
 var progressBars=document.querySelectorAll(".skills-progress > div");
+
 var visited=false;
 function initialiseBar(bar)
 {
@@ -110,7 +111,7 @@ function improvedScroll(){
     else if(barCoordinates.top>window.innerHeight)
     {
       bar.setAttribute("data-visited",false);
-      bar.initialiseBar(bar);
+      initialiseBar(bar);
     }
   }
 }
