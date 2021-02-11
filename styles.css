@@ -1,6 +1,6 @@
 /* Smooth Scorlling */
 html{
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
 }
 /* Loader */
 .overlay-loader {
