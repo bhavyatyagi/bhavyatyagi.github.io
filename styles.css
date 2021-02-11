@@ -1,3 +1,7 @@
+/* Smooth Scorlling */
+html{
+  scroll-behaviour: smooth;
+}
 /* Loader */
 .overlay-loader {
   position: fixed;
@@ -510,7 +514,7 @@ p#intro{
   background-color: skyblue;
 }
 .blog-percent{
-  width: 75%;
+  width: 55%;
   height: inherit;
   background-color: #819a78;
 }
