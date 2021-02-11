@@ -4,27 +4,27 @@ $(window).on("load",function(){
 });
 
 //SmoothScrollBasic
-var navMenuAnchorTags = document.querySelectorAll('.horizontal-lists a');
-var interval;
-for (var i = 0; i < navMenuAnchorTags.length; i++) {
-  navMenuAnchorTags[i].addEventListener('click', function(event) {
-    event.preventDefault();
-    var targetSectionID=this.textContent.trim().toLowerCase();
-    var targetSection=document.getElementById(targetSectionID);
+// var navMenuAnchorTags = document.querySelectorAll('.horizontal-lists a');
+// var interval;
+// for (var i = 0; i < navMenuAnchorTags.length; i++) {
+//   navMenuAnchorTags[i].addEventListener('click', function(event) {
+//     event.preventDefault();
+//     var targetSectionID=this.textContent.trim().toLowerCase();
+//     var targetSection=document.getElementById(targetSectionID);
 
-    interval=setInterval(scrollVertically,20,targetSection);
-  });
-}
+//     interval=setInterval(scrollVertically,20,targetSection);
+//   });
+// }
 
-function scrollVertically(targetSection){
-  var targetSectionCoordinates=targetSection.getBoundingClientRect();
-  if(targetSectionCoordinates.top<=50)
-  {
-    clearInterval(interval);
-    return;
-  }
-  window.scrollBy(0,75);
-}
+// function scrollVertically(targetSection){
+//   var targetSectionCoordinates=targetSection.getBoundingClientRect();
+//   if(targetSectionCoordinates.top<=50)
+//   {
+//     clearInterval(interval);
+//     return;
+//   }
+//   window.scrollBy(0,75);
+// }
 
 
 //Skill Section Animation Bars
