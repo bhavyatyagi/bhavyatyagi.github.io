@@ -1,7 +1,8 @@
-/* Smooth Scorlling */
+/* site-scroll behavior | Implemented in JS */
 html{
   scroll-behavior: smooth;
 }
+
 /* Loader */
 .overlay-loader {
   position: fixed;
@@ -540,19 +541,36 @@ p#intro{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+  transition: all 0.5s;
 }
 .projects-images img{
-  width: 300px;
+  width: 100%;
+
 }
-.projects-text{
+.projects-text {
   transition: all 0.5s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: -2px;
     height: 100%;
     color: transparent;
     text-align: center;
-    padding: 10px;
+
+}
+.projects-text span{
+  position: relative;
+  top: 50%;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  padding: 5px;
+}
+.projects-text span:hover{
+  background-color: #479C9D;
 }
 .projects-images:hover{
   box-shadow: 0 0 50px #a5cacd;
@@ -560,6 +578,8 @@ p#intro{
 .projects-images:hover .projects-text{
   color:white;
   background-color: #80808078;
+  background-size: cover;
+
 }
 
 /* Work Experience */
@@ -635,7 +655,12 @@ p#intro{
   .timeline-box:nth-child(2n+1)::after{
     left: -11%;
   }
-
+  .skills-progress{
+    width: 8.5rem;
+  }
+  .projects-images{
+    margin-bottom: 40px;
+  }
 }
 .timeline-traveller{
 
