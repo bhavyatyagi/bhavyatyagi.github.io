@@ -11,11 +11,11 @@ $(window).on("load",function(){
 //     event.preventDefault();
 //     var targetSectionID=this.textContent.trim().toLowerCase();
 //     var targetSection=document.getElementById(targetSectionID);
-
+//
 //     interval=setInterval(scrollVertically,20,targetSection);
 //   });
 // }
-
+//
 // function scrollVertically(targetSection){
 //   var targetSectionCoordinates=targetSection.getBoundingClientRect();
 //   if(targetSectionCoordinates.top<=50)
@@ -72,7 +72,7 @@ $(window).on("load",function(){
 //   }
 // }
 
-//
+//Skill Section Animation Bars IMPROVED
 
 var progressBars=document.querySelectorAll(".skills-progress > div");
 
@@ -118,3 +118,13 @@ function improvedScroll(){
 
 window.addEventListener("scroll",improvedScroll);
 window.addEventListener("load",improvedScroll);
+
+
+
+//Contact-Form Submission Alert
+$(".contact-form button").click(function(event){
+  if($("#required_stuff").val()=="")
+  alert("Please fill the required details properly!");
+  else
+  alert("Thank you for your time. Mr. Tyagi will get back to you soon!");
+});
