@@ -128,3 +128,22 @@ $(".contact-form button").click(function(event){
   else
   alert("Thank you for your time. Mr. Tyagi will get back to you soon!");
 });
+
+
+// Site Progress bar
+var filler=document.getElementById('filler');
+function getDocHeight(){
+    var d=document;
+    return Math.max(d.body.offsetHeight,d.body.scrollHeight,d.body.clientHeight);
+}
+var docHeight=getDocHeight();
+var windowHeight=window.innerHeight;
+window.addEventListener('resize',function(){
+   	docHeight=getDocHeight();
+    windowHeight=window.innerHeight;
+});
+window.addEventListener('scroll',function(){
+   	docHeight=getDocHeight();
+     var scrolled = Math.floor((window.scrollY/(docHeight-windowHeight))*100);
+    filler.style.width=scrolled+"%";
+});
