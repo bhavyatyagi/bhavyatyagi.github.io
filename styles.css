@@ -218,12 +218,14 @@ header{
     height:6px;
     /* border: 2px solid lightslategrey; */
     box-shadow: 0 0 10px .1px lightslategrey;
+    z-index: 50;
 }
 #filler{
     height:6px;
     background-color: #a5cacd;
     width: 0%;
     transition: all 0.3s;
+    z-index: 50;
 }
 
 
@@ -441,8 +443,16 @@ p#intro{
   font-size: 1rem;
   color: lightslategrey;
 }
-
-
+.emphasis-text{
+  color: #FD5901;
+  font-weight: 600;
+}
+#flag{
+  position: relative;
+  width: 20px;
+  height: 13px;
+  top: 1px;
+}
 /* Skills Section */
 
 .mb75px{
