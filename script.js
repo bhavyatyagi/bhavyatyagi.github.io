@@ -123,7 +123,7 @@ window.addEventListener("load",improvedScroll);
 
 //Contact-Form Submission Alert
 $(".contact-form button").click(function(event){
-  if($("#required_stuff").val()=="")
+  if($("#required_stuff").val()==="" || $("#required_name").val()==="")
   alert("Please fill the required details properly!");
   else
   alert("Thank you for your time. Mr. Tyagi will get back to you soon!");
