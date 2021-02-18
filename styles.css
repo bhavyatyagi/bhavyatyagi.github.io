@@ -1,3 +1,15 @@
+/* Webkit-Scroller */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a5cacd;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightslategrey;
+}
 /* site-scroll behavior | Implemented in JS */
 html{
   scroll-behavior: smooth;
