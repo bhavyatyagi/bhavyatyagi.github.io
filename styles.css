@@ -1,7 +1,7 @@
 /* Removing feedback colour on tap on mobiles */
 * {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Webkit-Scroller */
@@ -865,25 +865,42 @@ p#intro {
 }
 
 /* Media Queries for Side Social Bars */
-@media screen and (max-width:1450px) {
+@media screen and (min-width:1450px) {
   .socialSlideRight {
     /* margin-right: -25%; */
-    margin-top: 24%;
-    height: 99%;
+    /* margin-top: 24%;
+    height: 99%; */
+    height: 18%;
+
   }
 
   .socialSlideLeft {
     /* margin-left: 5%; */
-    margin-top: 52.5%;
-    height: 114%;
+    /* margin-top: 52.5%;
+    height: 114%; */
+    height: 40%;
+    margin-top: 20%;
   }
 
   .socialStickyLeft {
-    top: 69%;
+    top: 55%;
   }
 
   .socialStickyRight {
-    top: 36%;
+    /* top: 36%; */
+  }
+
+  .socialStickyRight a span {
+
+    transition: all 0.4s;
+    margin-right: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .socialStickyLeft a span {
+
+    transition: all 0.4s;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
