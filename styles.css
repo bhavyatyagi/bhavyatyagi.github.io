@@ -1,3 +1,9 @@
+/* Removing feedback colour on tap on mobiles */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* Webkit-Scroller */
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -394,7 +400,7 @@ header {
 
 @media screen and (max-width: 600px) {
   html {
-    width: 540px;
+    width: 170%;
   }
 
   .myimage img {
@@ -827,7 +833,7 @@ p#intro {
 
 .socialSlideRight {
   position: absolute;
-  height: 44%;
+  height: 42.5%;
   /* border: 2px solid black; */
   right: 0;
   width: 20%;
@@ -911,22 +917,22 @@ p#intro {
   .socialSlideRight {
     /* margin-right: -25%; */
     right: -35%;
-    margin-top: 30%;
-    height: 180%;
+    margin-top: 49%;
+    height: 130%;
   }
 
   .socialSlideLeft {
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 140%;
-    height: 185%;
+    height: 137%;
   }
 
   .socialStickyLeft {
-    top: 69%;
+    top: 63%;
   }
 
   .socialStickyRight {
-    top: 30%;
+    top: 37%;
   }
 }
 
