@@ -411,10 +411,6 @@ header {
     margin: 10px;
   }
 
-  div.timeline-box {
-    width: 340px;
-  }
-
   .form input, textarea {
     margin-left: 10% !important;
   }
@@ -795,7 +791,7 @@ p#intro {
 /* projects-Section */
 .socialSlideLeft {
   position: absolute;
-  height: 80%;
+  height: 75%;
   /* border: 2px solid black; */
   left: 0;
   width: 20%;
@@ -809,7 +805,7 @@ p#intro {
   left: 0.25%;
   top: 79%;
   transform: rotate(-90deg);
-  margin-top: 95%;
+  margin-top: 80%;
 }
 
 .socialStickyLeft a {
@@ -844,7 +840,7 @@ p#intro {
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: 35%;
+  top: 33%;
   right: 2%;
   transform: rotate(90deg);
 }
@@ -869,6 +865,28 @@ p#intro {
 }
 
 /* Media Queries for Side Social Bars */
+@media screen and (max-width:1450px) {
+  .socialSlideRight {
+    /* margin-right: -25%; */
+    margin-top: 24%;
+    height: 99%;
+  }
+
+  .socialSlideLeft {
+    /* margin-left: 5%; */
+    margin-top: 52.5%;
+    height: 114%;
+  }
+
+  .socialStickyLeft {
+    top: 69%;
+  }
+
+  .socialStickyRight {
+    top: 36%;
+  }
+}
+
 @media screen and (max-width:900px) {
   .socialSlideRight {
     /* margin-right: -25%; */
@@ -893,19 +911,19 @@ p#intro {
 
 @media screen and (max-width:600px) {
   .socialSlideRight {
-    margin-right: -25%;
+    margin-right: -57%;
     margin-top: 35%;
     height: 140%;
   }
 
   .socialSlideLeft {
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 115%;
     height: 150%;
   }
 
   .socialStickyLeft {
-    top: 70%;
+    top: 62%;
   }
 
   .socialStickyRight {
@@ -916,7 +934,7 @@ p#intro {
 @media screen and (max-width: 400px) {
   .socialSlideRight {
     /* margin-right: -25%; */
-    right: -35%;
+    right: -4.5%;
     margin-top: 49%;
     height: 130%;
   }
@@ -932,7 +950,7 @@ p#intro {
   }
 
   .socialStickyRight {
-    top: 37%;
+    top: 25%;
   }
 }
 
@@ -1064,7 +1082,7 @@ p#intro {
 
   .timeline-box {
     left: 12%;
-    width: 80%;
+    width: 90%;
   }
 
   .timeline-box:nth-child(2n) {
