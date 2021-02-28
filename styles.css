@@ -865,7 +865,44 @@ p#intro {
 }
 
 /* Media Queries for Side Social Bars */
-@media screen and (min-width:1450px) {
+@media screen and (max-width:2560px) and (min-width: 1900px) {
+  
+  .socialSlideRight {
+    /* margin-right: -25%; */
+    margin-top: 9%;;
+    height: 8%;
+
+  }
+
+  .socialSlideLeft {
+    /* margin-left: 5%; */
+    margin-top: -6%;
+    height: 33%;
+    /* margin-top: 20%; */
+  }
+
+  .socialStickyLeft {
+    top: 50%;
+  }
+
+  .socialStickyRight {
+    top: 50%;
+  }
+
+  .socialStickyRight a span {
+
+    transition: all 0.4s;
+    margin-right: 0.3rem;
+    /* font-size: 1.8rem; */
+  }
+  .socialStickyLeft a span {
+
+    transition: all 0.4s;
+    margin-left: 0.3rem;
+    /* font-size: 1.8rem; */
+  }
+}
+@media screen and (min-width:1450px) and (max-width: 1899px) {
   .socialSlideRight {
     /* margin-right: -25%; */
     /* margin-top: 24%;
