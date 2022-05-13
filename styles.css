@@ -411,7 +411,8 @@ header {
     margin: 10px;
   }
 
-  .form input, textarea {
+  .form input,
+  textarea {
     margin-left: 10% !important;
   }
 
@@ -866,10 +867,11 @@ p#intro {
 
 /* Media Queries for Side Social Bars */
 @media screen and (max-width:2560px) and (min-width: 1900px) {
-  
+
   .socialSlideRight {
     /* margin-right: -25%; */
-    margin-top: 9%;;
+    margin-top: 9%;
+    ;
     height: 8%;
 
   }
@@ -895,6 +897,7 @@ p#intro {
     margin-right: 0.3rem;
     /* font-size: 1.8rem; */
   }
+
   .socialStickyLeft a span {
 
     transition: all 0.4s;
@@ -902,6 +905,7 @@ p#intro {
     /* font-size: 1.8rem; */
   }
 }
+
 @media screen and (min-width:1450px) and (max-width: 1899px) {
   .socialSlideRight {
     /* margin-right: -25%; */
@@ -933,6 +937,7 @@ p#intro {
     margin-right: 1.5rem;
     font-size: 1.8rem;
   }
+
   .socialStickyLeft a span {
 
     transition: all 0.4s;
@@ -1157,7 +1162,7 @@ p#intro {
 }
 
 .timeline-traveller {
-  top: 40%;
+  top: 45%;
   display: block;
   position: sticky;
   transform: rotate(90deg);
@@ -1167,8 +1172,8 @@ p#intro {
 .timeline-traveller i {
   color: darkslategrey;
   display: block;
-  margin-left: -35px;
-  margin-top: 30px;
+  /* margin-left: -35px; */
+  margin-top: -4px;
 }
 
 /* Education-Section */
@@ -1269,7 +1274,10 @@ p#intro {
   }
 }
 
-.designation, .institute, .duration, .description {
+.designation,
+.institute,
+.duration,
+.description {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -1327,7 +1335,8 @@ p#intro {
   height: 50vh;
 }
 
-.form input, textarea {
+.form input,
+textarea {
   max-width: 90%;
   margin: 15px;
   padding: 4px 10px;
@@ -1361,7 +1370,11 @@ p#intro {
   color: black;
 }
 
-.form textarea, .form input, .Where p span, .form i, p {
+.form textarea,
+.form input,
+.Where p span,
+.form i,
+p {
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
@@ -1424,4 +1437,22 @@ footer {
 
 #heart:hover {
   color: red;
+}
+
+
+/* Experience Styles  */
+.experience-divider {
+  position: absolute;
+  height: 64%;
+  width: 0;
+  border: 1.5px dashed #a5cacd;
+  top: 13%;
+  left: 49.59%;
+  /* overflow: hidden; */
+}
+
+@media screen and (max-width: 600px) {
+  .experience-divider {
+    left: 4%;
+  }
 }
