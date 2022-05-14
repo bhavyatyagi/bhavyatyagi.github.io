@@ -841,7 +841,7 @@ p#intro {
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: 33%;
+  top: 42%;
   right: 2%;
   transform: rotate(90deg);
 }
@@ -971,7 +971,7 @@ p#intro {
 @media screen and (max-width:600px) {
   .socialSlideRight {
     margin-right: -57%;
-    margin-top: 35%;
+    margin-top: 39%;
     height: 140%;
   }
 
@@ -986,22 +986,22 @@ p#intro {
   }
 
   .socialStickyRight {
-    top: 33%;
+    top: 39%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 389px) {
   .socialSlideRight {
     /* margin-right: -25%; */
     right: -4.5%;
     margin-top: 49%;
-    height: 130%;
+    height: 210%;
   }
 
   .socialSlideLeft {
     margin-left: 10%;
     margin-top: 140%;
-    height: 137%;
+    height: 210%;
   }
 
   .socialStickyLeft {
@@ -1009,7 +1009,7 @@ p#intro {
   }
 
   .socialStickyRight {
-    top: 25%;
+    top: 31%;
   }
 }
 
@@ -1136,7 +1136,7 @@ p#intro {
 
 @media screen and (max-width: 600px) {
   .timeline-divider {
-    left: 4%;
+    left: 3.5%;
   }
 
   .timeline-box {
@@ -1249,7 +1249,7 @@ p#intro {
 
 @media screen and (max-width:600px) {
   .education-divider {
-    left: 4%;
+    left: 3.5%;
   }
 
   .education-box {
@@ -1443,7 +1443,7 @@ footer {
 /* Experience Styles  */
 .experience-divider {
   position: absolute;
-  height: 64%;
+  height: 65%;
   width: 0;
   border: 1.5px dashed #a5cacd;
   top: 13%;
@@ -1453,6 +1453,6 @@ footer {
 
 @media screen and (max-width: 600px) {
   .experience-divider {
-    left: 4%;
+    left: 3.5%;
   }
 }
