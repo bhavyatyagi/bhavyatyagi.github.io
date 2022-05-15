@@ -380,6 +380,7 @@ html {
 /* Body */
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* Body-Header */
@@ -1420,7 +1421,7 @@ footer {
   font-family: "proxima-nova", sans-serif;
   font-weight: bold;
   text-align: center;
-  color: #d9d9d9;
+  color: #989797;
   padding: 0px 0 15px 0;
   margin: 0;
   transition: all 0.5s;
@@ -1455,4 +1456,33 @@ footer {
   .experience-divider {
     left: 3.5%;
   }
+}
+
+
+/* New Animations */
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-50%);
+}
+
+.from-right {
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: transform 400ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
 }
