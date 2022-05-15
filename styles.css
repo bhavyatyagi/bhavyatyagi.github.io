@@ -2,6 +2,7 @@
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+
 }
 
 /* Webkit-Scroller */
@@ -380,7 +381,6 @@ html {
 /* Body */
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 
 /* Body-Header */
@@ -1462,27 +1462,31 @@ footer {
 /* New Animations */
 .fade-in {
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transform: translateY(25%);
+  transition: transform 320ms ease-in, opacity 250ms ease-in;
 }
 
 .fade-in.appear {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .from-left {
-  transform: translateX(-50%);
+  transform: translateY(25%);
 }
 
 .from-right {
-  transform: translateX(50%);
+  transform: translateY(25%);
 }
 
 .from-left,
 .from-right {
-  transition: transform 400ms ease-in;
+  opacity: 0;
+  transition: transform 320ms ease-in, opacity 250ms ease-in;
 }
 
 .from-left.appear,
 .from-right.appear {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateY(0);
 }
