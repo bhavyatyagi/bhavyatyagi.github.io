@@ -475,7 +475,7 @@ nav {
   letter-spacing: 1.7px;
   font-family: 'Montserrat', sans-serif;
   transition: color 0.5s, border-bottom 40s;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .text-center {
@@ -1444,10 +1444,10 @@ footer {
 /* Experience Styles  */
 .experience-divider {
   position: absolute;
-  height: 65%;
+  height: 75%;
   width: 0;
   border: 1.5px dashed #a5cacd;
-  top: 13%;
+  top: 9%;
   left: 49.59%;
   /* overflow: hidden; */
 }
