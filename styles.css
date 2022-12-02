@@ -793,11 +793,11 @@ p#intro {
 /* projects-Section */
 .socialSlideLeft {
   position: absolute;
-  height: 75%;
+  height: 100%;
   /* border: 2px solid black; */
   left: 0;
   width: 20%;
-  margin-top: 27.5%;
+  margin-top: 41%;
 }
 
 .socialStickyLeft {
@@ -805,9 +805,9 @@ p#intro {
   justify-content: space-between;
   position: sticky;
   left: 0.25%;
-  top: 79%;
+  top: 73%;
   transform: rotate(-90deg);
-  margin-top: 80%;
+  /* margin-top: 70%;  */
 }
 
 .socialStickyLeft a {
@@ -831,11 +831,11 @@ p#intro {
 
 .socialSlideRight {
   position: absolute;
-  height: 42.5%;
+  height: 100%;
   /* border: 2px solid black; */
   right: 0;
   width: 20%;
-  margin-top: 20%;
+  margin-top: 21%;
 }
 
 .socialStickyRight {
@@ -951,21 +951,21 @@ p#intro {
   .socialSlideRight {
     /* margin-right: -25%; */
     margin-top: 24%;
-    height: 99%;
+    height: 250%;
   }
 
   .socialSlideLeft {
     /* margin-left: 5%; */
-    margin-top: 52.5%;
-    height: 114%;
+    margin-top: 70.5%;
+    height: 248%;
   }
 
   .socialStickyLeft {
-    top: 69%;
+    top: 71%;
   }
 
   .socialStickyRight {
-    top: 36%;
+    top: 34%;
   }
 }
 
@@ -973,17 +973,17 @@ p#intro {
   .socialSlideRight {
     margin-right: -57%;
     margin-top: 39%;
-    height: 140%;
+    height: 300%;
   }
 
   .socialSlideLeft {
     margin-left: 10%;
-    margin-top: 115%;
-    height: 150%;
+    margin-top: 135%;
+    height: 300%;
   }
 
   .socialStickyLeft {
-    top: 62%;
+    top: 65%;
   }
 
   .socialStickyRight {
@@ -996,17 +996,17 @@ p#intro {
     /* margin-right: -25%; */
     right: -4.5%;
     margin-top: 49%;
-    height: 210%;
+    height: 350%;
   }
 
   .socialSlideLeft {
     margin-left: 10%;
-    margin-top: 140%;
-    height: 210%;
+    margin-top: 160%;
+    height: 350%;
   }
 
   .socialStickyLeft {
-    top: 63%;
+    top: 70%;
   }
 
   .socialStickyRight {
