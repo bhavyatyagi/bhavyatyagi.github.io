@@ -1,7 +1,12 @@
 //Loader jQuery
-$(document).ready(function () {
-  $(".overlay-loader").fadeOut("slow");
-});
+function stateChange() {
+  setTimeout(function () {
+    $(document).ready(function () {
+      $(".overlay-loader").fadeOut("slow");
+    });
+  }, 1500);
+}
+stateChange()
 
 //SmoothScrollBasic
 // var navMenuAnchorTags = document.querySelectorAll('.horizontal-lists a');
@@ -77,6 +82,7 @@ $(document).ready(function () {
 var progressBars = document.querySelectorAll(".skills-progress > div");
 
 var visited = false;
+
 function initialiseBar(bar) {
   bar.setAttribute("data-visited", false);
   bar.style.width = 0 + '%';
@@ -84,6 +90,7 @@ function initialiseBar(bar) {
 for (var bar of progressBars) {
   initialiseBar(bar);
 }
+
 function fillBar(bar) {
   var currentWidth = 0;
   var targetwidth = bar.getAttribute("data-bar-width");
@@ -96,14 +103,14 @@ function fillBar(bar) {
     bar.style.width = currentWidth + '%';
   }, 10);
 }
+
 function improvedScroll() {
   for (let bar of progressBars) {
     var barCoordinates = bar.getBoundingClientRect();
     if ((bar.getAttribute("data-visited") == "false") && (barCoordinates.top <= (window.innerHeight - barCoordinates.height))) {
       bar.setAttribute("data-visited", true);
       fillBar(bar);
-    }
-    else if (barCoordinates.top > window.innerHeight) {
+    } else if (barCoordinates.top > window.innerHeight) {
       bar.setAttribute("data-visited", false);
       initialiseBar(bar);
     }
@@ -126,6 +133,7 @@ $(".contact-form button").click(function (event) {
 
 // Site Progress bar
 var filler = document.getElementById('filler');
+
 function getDocHeight() {
   var d = document;
   return Math.max(d.body.offsetHeight, d.body.scrollHeight, d.body.clientHeight);
@@ -144,7 +152,10 @@ window.addEventListener('scroll', function () {
 
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
-const appearOptions = { threshold: 0, rootMargin: "0px 0px -330px 0px" };
+const appearOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -330px 0px"
+};
 const appearOnScroll = new IntersectionObserver(
   function (enteries, appearOnScroll) {
     enteries.forEach(entry => {
