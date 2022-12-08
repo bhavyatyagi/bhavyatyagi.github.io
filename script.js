@@ -1,5 +1,5 @@
 //Loader jQuery
-$(window).on("load", function () {
+$(document).ready(function () {
   $(".overlay-loader").fadeOut("slow");
 });
 
