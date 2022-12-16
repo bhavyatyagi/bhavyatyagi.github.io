@@ -1,7 +1,16 @@
-## Welcome to my Web-Portfolio
+## Title: Personal Web-Portfolio 
 
+## 1. Methodology 🔣
+
+## 2. Description 📚
 bhavyatyagi.in is my personal web portfolio which is built using HTML, CSS and JavaScript extinsively. The portfolio showcases my skills and projects that I have worked on. It an application which is responsive and works on all devices. This portfolio is more about me at a glance. Suggestions and feedback are always welcome.
 
-## Info
+## 3. Input / Output 💻
 
-It is hosted on [Github Pages](https://pages.github.com/). The theme is based on [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/). The theme is modified to suit my needs. The theme is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## 4. Live Link 🔗
+### The app is now deployed at http://bhavyatyagi.in/
+
+## 5. Screenshots 🖥️
+![Personal Web-Portfolio](https://tobefilled.in)
+
+## 6. How to run the app 🛫:
