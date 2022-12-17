@@ -1,6 +1,8 @@
 ## Title: Personal Web-Portfolio 😎
 
-## 1. Methodology 🔣
+## 1. Methodology / Architecture 🔣
+The idea is to continously develop, test & deploy the applciation as and when new requirements and feedbacks are available following the Agile Methodology.
+![Methodology](https://i.ibb.co/TkcHmdk/Flowcharts.png)
 
 ## 2. Description 📚
 
