@@ -29,19 +29,6 @@ You can fill in the form at the bottom of the page to interact with the Portfoli
 1. Open the command prompt/terminal.
 2. Clone the repo using
 
-        git clone https://github.com/bhavyatyagi/visualization-dashboard.git
-    
-3. Go to the directory where the program is stored/cloned
-4. Type: 
+        git clone https://github.com/bhavyatyagi/bhavyatyagi.github.io
+3. Serve HTML content directly on PORT 5000 using VS Code.
 
-        python3 app.py
-        
-5. The program will run
-6. If it asks for missing libraries then do:
-
-        pip install requirements.txt
-    OR      
-
-        pip install dash pandas plotly
-    Note: pip3 instead of pip if in case shows command not found.
-7. Run the program again via step 4.
