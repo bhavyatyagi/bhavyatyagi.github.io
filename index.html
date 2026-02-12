@@ -1,571 +1,500 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Title -->
   <title>Bhavya Tyagi | Portfolio</title>
-  <!-- Viewport -->
-  <meta name="viewport" content="width=device-width, user-scalable=yes">
-  <!-- Description -->
-  <meta name="description" content="I am Bhavya Tyagi, a budding web and software developer. @bhavyatyagi16">
-  <!-- Font-APIs -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="shortcut icon"
-    href="https://lh4.googleusercontent.com/cpxI8RDOWt6cuhVZAygZnzLU2ocxjywhbFGr3tMtd-87SQ854912ytJkimWdANy9m0Nzp90=w16383">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bhavya Tyagi — Software Engineer. Portfolio showcasing experience, projects, and skills.">
+  <link rel="icon" type="image/jpeg" href="./assets/myimage1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/49a924637f.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link href="https://twbs.github.io/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Links to own CSS overriding at the end -->
   <link rel="stylesheet" href="./styles.css">
-
 </head>
-
 <body>
-  <div id="loader" class="overlay-loader">
-    <div class="loader-background color-flip"></div>
-    <img class="loader-icon spinning-cog" src="assets/cog11.svg">
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-ring"></div>
   </div>
-  <header>
-    <nav id="navbar">
-      <ul class="horizontal-lists text-center">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li><a href="#skills">Skills</a></li>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="./assets/myimage1.jpg" alt="BT" class="nav-avatar">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#volunteering">Volunteering</a></li>
+        <li><a href="#volunteering">Leadership</a></li>
         <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- <br><br> -->
-    <div class="nav-content">
-      <div class="name text-center">
-
-
-        <h1 id="firstname"> &nbspBhavya</h1>
-        <h1 id="lastname">&nbspTyagi</h1>
-      </div>
-      <ul class="social text-center slowitdown">
-        <li><a target="_blank" href="https://www.linkedin.com/in/bhavya-tyagi-443619149/"><i
-              class="fab fa-linkedin-in"></i></a></li>
-        <li><a target="_blank" href="https://www.codechef.com/users/bhavyatyagi16"><i
-              class="fas fa-code slowitdown "></i></a></li>
-        <li><a target="_blank" href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope slowitdown "></i></a>
-        </li>
-        <li><a target="_blank" href="https://www.facebook.com/bhavytyagi16"><i
-              class="fab fa-facebook-f slowitdown "></i></a></li>
-        <li><a target="_blank" href="https://www.quora.com/profile/Bhavya-Tyagi-36"><i
-              class="fab fa-quora slowitdown "></i></a></li>
-
+        <li><a href="./blog/" class="nav-blog-link">Blog <i class="fas fa-arrow-right fa-xs"></i></a></li>
       </ul>
     </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </nav>
 
-    <div id="progressBar">
-      <div id="filler">
-
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">Hello, I'm</p>
+      <h1 class="hero-name reveal">
+        <span class="gradient-text">Bhavya Tyagi</span>
+      </h1>
+      <p class="hero-tagline reveal" style="font-family:'Caveat',cursive; font-size:1.6rem;">Software Engineer &amp; Developer</p>
+      <div class="hero-socials reveal">
+        <a href="https://www.linkedin.com/in/bhavya-tyagi-443619149/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/bhavyatyagi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.codechef.com/users/bhavyatyagi16" target="_blank" aria-label="CodeChef"><i class="fas fa-code"></i></a>
+        <a href="mailto:bhavyatyagi16@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
+      <a href="#blog-showcase" class="hero-scroll-btn reveal">
+        <i class="fas fa-chevron-down"></i>
+      </a>
     </div>
-  </header>
+    <div class="hero-particles" id="particles"></div>
+  </section>
 
   <main>
 
+    <!-- Blog Showcase (Carousel) -->
+    <section id="blog-showcase">
+      <div class="container">
+        <div class="showcase-header">
+          <div>
+            <h2 class="section-subtitle reveal">Latest writing</h2>
+            <h3 class="section-title reveal">From the Blog</h3>
+          </div>
+          <a href="./blog/" class="showcase-view-all reveal">
+            View all posts <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="carousel-wrapper reveal">
+          <div class="carousel" id="blogCarousel">
+
+            <!-- Card 1: Featured / Real Post -->
+            <a href="./blog/from-intern-to-sre.html" class="carousel-card carousel-card-featured">
+              <div class="carousel-card-glow"></div>
+              <div class="carousel-card-inner">
+                <div class="carousel-card-icon" style="--card-hue: 250;">
+                  <i class="fas fa-terminal"></i>
+                </div>
+                <div class="carousel-card-meta">
+                  <span class="carousel-tag">Career</span>
+                  <span class="carousel-date">Feb 11, 2025</span>
+                </div>
+                <h4>From Intern to SRE: Lessons I Learned Building Reliable Systems at Scale</h4>
+                <p>My journey from college to building infrastructure tools at LinkedIn &mdash; the mistakes, the "aha" moments, and the principles that changed everything.</p>
+                <span class="carousel-read-more">Read article <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <!-- Card 2: Coming Soon -->
+            <div class="carousel-card carousel-card-upcoming">
+              <div class="carousel-card-inner">
+                <div class="carousel-card-icon" style="--card-hue: 180;">
+                  <i class="fab fa-docker"></i>
+                </div>
+                <div class="carousel-card-meta">
+                  <span class="carousel-tag tag-upcoming">Coming Soon</span>
+                </div>
+                <h4>Docker in Production: Patterns I Wish I Knew Earlier</h4>
+                <p>Practical Docker patterns for real-world deployments beyond the tutorials.</p>
+              </div>
+            </div>
+
+            <!-- Card 3: Coming Soon -->
+            <div class="carousel-card carousel-card-upcoming">
+              <div class="carousel-card-inner">
+                <div class="carousel-card-icon" style="--card-hue: 320;">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="carousel-card-meta">
+                  <span class="carousel-tag tag-upcoming">Coming Soon</span>
+                </div>
+                <h4>Building a Weather Prediction CNN From Scratch</h4>
+                <p>A deep dive into the AI/ML model I built during my research internship at IIT Indore.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Navigation -->
+          <div class="carousel-nav">
+            <button class="carousel-btn" id="carouselPrev" aria-label="Previous">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <button class="carousel-btn" id="carouselNext" aria-label="Next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
-      <div class="myimage">
-        <img src="./assets/myimage1.jpg" alt="Profile Photo">
-      </div>
-      <div class="mb75px about-text text-center">
-        <p id="heading">Senior at TIET, Patiala | Computer Science & Engineering <br> JOINT SECRETARY AT LINUX USER
-          GROUP</p>
-        <p id="intro" class="fade-in">
-          Hello World <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" ,
-            width="25px">, I am <span class="emphasis-text">Bhavya Tyagi</span> from <img id="flag"
-            src="./assets/india.png" alt="India">. I'm skilled in various <span class="emphasis-text">tools and
-            technologies</span>. I am passionate about developing software, doing competitive programming, and sometimes
-          playing table tennis. I'm a budding <span class="emphasis-text">Software
-            Engineer & Developer</span>. This web portfolio gives professional insights about me. Presently pursuing a
-          <span class="emphasis-text">Bachelor
-            of Engineering</span> - BE that is focused on Computer Science and Engineering from Thapar Institute of
-          Engineering and
-          Technology, Patiala, India.
-        </p>
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <div class="image-wrapper">
+              <img src="./assets/myimage1.jpg" alt="Bhavya Tyagi">
+              <div class="image-border"></div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <h2 class="section-subtitle">Get to know me</h2>
+            <h3 class="section-title">About Me</h3>
+            <p>
+              Hello World! I am <strong>Bhavya Tyagi</strong> from Delhi, India. I'm a passionate
+              <strong>Software Engineer &amp; Developer</strong> skilled in various tools and technologies.
+              I enjoy developing software, competitive programming, and sometimes playing table tennis.
+            </p>
+            <p>
+              I hold a <strong>Bachelor of Engineering</strong> in Computer Science from
+              Thapar Institute of Engineering and Technology, Patiala with a <strong>9.75 CGPA</strong>.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-number">4+</span>
+                <span class="highlight-label">Internships</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">7+</span>
+                <span class="highlight-label">Projects</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">9.75</span>
+                <span class="highlight-label">CGPA</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
-      <div>
-        <h1 class="section-heading mb75px">
-          <span>
-            <i class="fas fa-chalkboard-teacher"></i>
-          </span>
-          <span>SKILLS</span>
-        </h1>
-      </div>
-      <div class="skills-display" id="skills-container">
-        <div class="skills-progress">
-          <div class="eighty-five-percent mb-blue" data-bar-width="85" data-visited="false">
-            <div class="skills-name">
-              <span>C/C++</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="blog-percent" data-bar-width="75">
-            <div class="skills-name">
-              <span>Python</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="html-percent" data-bar-width="80" data-visited="false">
-            <div class="skills-name">
-              <span>HTML5</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-progress">
-          <div class="css-percent" data-bar-width="70" data-visited="false">
-            <div class="skills-name">
-              <span>CSS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-progress">
-          <div class="JavaScript-percent" data-bar-width="60" data-visited="false">
-            <div class="skills-name">
-              <span>JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-progress">
-          <div class="JQuery-percent" data-bar-width="65" data-visited="false">
-            <div class="skills-name">
-              <span>MongoDB</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="Node-JS-percent" data-bar-width="85" data-visited="false">
-            <div class="skills-name">
-              <span>mySQL</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="blog-percent" data-bar-width="70">
-            <div class="skills-name">
-              <span>Node.js</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="bootstrap-percent" data-bar-width="65" data-visited="false">
-            <div class="skills-name">
-              <span>Bootstrap</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="mongo-percent" data-bar-width="70" data-visited="false">
-            <div class="skills-name">
-              <span>Flask</span>
-            </div>
-
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="git-percent" data-bar-width="83" data-visited="false">
-            <div class="skills-name">
-              <span>Git</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="linux-percent" data-bar-width="70" data-visited="false">
-            <div class="skills-name">
-              <span>Linux</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="ve-percent" data-bar-width="85" data-visited="false">
-            <div class="skills-name">
-              <span>Postman</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-progress">
-          <div class="blog-percent" data-bar-width="55">
-            <div class="skills-name">
-              <span>Blogging</span>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-    </section>
-
-
+    <!-- Experience Section -->
     <section id="experience">
-      <h1 class="section-heading mb75px">
-        <span>
-          <i class="fas fa-briefcase"></i>
-        </span>
-        <span>Work Experience</span>
-      </h1>
-
-      <div class="timeline">
-        <div class="timeline-box from-left slide-in">
-          <div class="education-logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+      <div class="container">
+        <h2 class="section-subtitle reveal">Where I've worked</h2>
+        <h3 class="section-title reveal">Work Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="company-logo">
+                <div>
+                  <h4>Site Reliability Eng. Intern</h4>
+                  <h5>LinkedIn</h5>
+                </div>
+              </div>
+              <span class="timeline-date">Jun 2022 - Aug 2022</span>
+              <p>Worked on an internal tool with Infrastructure - Tools SRE team. Reduced toil, developed API, CLI tool using Python.</p>
+            </div>
           </div>
-          <div class="box-details">
-            <h3 class="designation">Site Reliability Eng. Intern</h3>
-            <h4 class="institute">LinkedIn</h4>
-            <h5 class="duration">(06/2022 - 08/2022)</h5>
-            <p class="description">Worked on an internal tool with Infrastructure - Tools SRE team. Reduced toil, developed API, CLI tool using Python</p>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="https://avatars.githubusercontent.com/u/71526309?s=280&v=4" alt="TigerGraph" class="company-logo">
+                <div>
+                  <h4>Developer Advocate Intern</h4>
+                  <h5>TigerGraph</h5>
+                </div>
+              </div>
+              <span class="timeline-date">Feb 2022 - Apr 2022</span>
+              <p>GitHub Externship Program '22 | Winter Cohort. Worked on a Video Recommendation System and developed Analytics Dashboard.</p>
+            </div>
           </div>
-        </div>
-        <div class="timeline-box from-left slide-in">
-          <div class="education-logo">
-            <img src="https://avatars.githubusercontent.com/u/71526309?s=280&v=4" alt="TigerGraph Logo">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="https://fintapp.in/static/media/fint.d6988d289005338cf235.png" alt="Fint" class="company-logo">
+                <div>
+                  <h4>Backend Developer Intern</h4>
+                  <h5>Fint</h5>
+                </div>
+              </div>
+              <span class="timeline-date">Jul 2021 - Feb 2022</span>
+              <p>Developed feature-rich server-side backend logic, schemas, and APIs using Node.js, MongoDB, Atlas, AWS for a FinTech Application.</p>
+            </div>
           </div>
-          <div class="box-details">
-            <h3 class="designation">Developer Advocate Intern</h3>
-            <h4 class="institute">TigerGraph</h4>
-            <h5 class="duration">(02/2022 - 04/2022)</h5>
-            <p class="description">GitHub Externship Program '22 | Winter Cohort. Worked on a Video Recommendation
-              System and developed Analytics Dashboard</p>
-          </div>
-        </div>
-        <div class="timeline-box from-right slide-in">
-          <div class="education-logo">
-            <img src="https://fintapp.in/static/media/fint.d6988d289005338cf235.png" alt="Fint Logo">
-          </div>
-          <div class="box-details">
-            <h3 class="designation">Backend Developer Intern</h3>
-            <h4 class="institute">Fint</h4>
-            <h5 class="duration">(07/2021 - 02/2022)</h5>
-            <p class="description">Developed feature-rich server-side backend logic, schemas, and APIs using Node.js,
-              MongoDB, Atlas, AWS for a FinTech Application</p>
-          </div>
-        </div>
-        <div class="timeline-box from-left slide-in">
-          <div class="education-logo">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Indian_Institute_of_Technology%2C_Indore_Logo.png/220px-Indian_Institute_of_Technology%2C_Indore_Logo.png"
-              alt="IIT Indore Logo">
-          </div>
-          <div class="box-details">
-            <h3 class="designation">Research Intern</h3>
-            <h4 class="institute">IIT Indore</h4>
-            <h5 class="duration">(06/2021 - 07/2022)</h5>
-            <p class="description">Weather Prediction using AI/ML | Worked on a CNN model for efficient Solar Wind
-              prediction under IIT Indore faculty</p>
-          </div>
-        </div>
-
-        <div class="experience-divider">
-          <div class="timeline-traveller">
-            <i class="fas fa-fighter-jet fa-lg"></i>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Indian_Institute_of_Technology%2C_Indore_Logo.png/220px-Indian_Institute_of_Technology%2C_Indore_Logo.png" alt="IIT Indore" class="company-logo">
+                <div>
+                  <h4>Research Intern</h4>
+                  <h5>IIT Indore</h5>
+                </div>
+              </div>
+              <span class="timeline-date">Jun 2021 - Jul 2022</span>
+              <p>Weather Prediction using AI/ML. Worked on a CNN model for efficient Solar Wind prediction under IIT Indore faculty.</p>
+            </div>
           </div>
         </div>
       </div>
-
     </section>
 
+    <!-- Education Section -->
     <section id="education">
-      <h1 class="section-heading mb75px">
-        <span>
-          <i class="fas fa-graduation-cap"></i>
-        </span>
-        <span>Education</span>
-      </h1>
-
-      <div class="education-display">
-        <div class="education-box from-left slide-in">
-          <div class="education-logo">
-            <img src="assets/tietlogo.png" alt="">
+      <div class="container">
+        <h2 class="section-subtitle reveal">My academic journey</h2>
+        <h3 class="section-title reveal">Education</h3>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="assets/tietlogo.png" alt="TIET" class="company-logo">
+                <div>
+                  <h4>Computer Science &amp; Engineering</h4>
+                  <h5>Thapar Institute of Engineering and Technology</h5>
+                </div>
+              </div>
+              <span class="timeline-date">Jul 2019 - 2023</span>
+              <div class="timeline-badge">9.75 CGPA</div>
+              <p>Bachelor of Engineering focused in Computer Science and Engineering from Thapar Institute of Engineering and Technology, Patiala.</p>
+            </div>
           </div>
-          <div class="box-details">
-            <h3 class="designation">Computer Science</h3>
-            <h4 class="institute">Thapar Institute</h4>
-            <h5 class="duration">9.75 CGPA | (07/2019-Present)</h5>
-            <p class="description">Bachelor of Engineering - BE focused in Computer Science and Engineering from Thapar
-              Institute of Engineering and Technology, Patiala</p>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="assets/rpvvlogo.png" alt="RPVV" class="company-logo">
+                <div>
+                  <h4>Senior Secondary (XII)</h4>
+                  <h5>RPVV Surajmal Vihar, Delhi</h5>
+                </div>
+              </div>
+              <span class="timeline-date">2018 - 2019</span>
+              <div class="timeline-badge">93.8%</div>
+              <p>Science Non-Medical stream with Economics (97%) and PCM 95.3% from Rajkiya Pratibha Vikas Vidyalaya.</p>
+            </div>
           </div>
-        </div>
-        <div class="education-box from-right slide-in">
-          <div class="education-logo">
-            <img src="assets/rpvvlogo.png" alt="">
-          </div>
-          <div class="box-details">
-            <h3 class="designation">Senior Secondary</h3>
-            <h4 class="institute">RPVV SMV Delhi</h4>
-            <h5 class="duration">93.8% | (2018-2019)</h5>
-            <p class="description">Science Non-Medical stream with Economics (97%) and PCM 95.3% from Rajkiya Pratibha
-              Vikas Vidyalaya, Surajmal Vihar Delhi</p>
-          </div>
-        </div>
-        <div class="education-box from-left slide-in">
-          <div class="education-logo">
-            <img src="assets/rpvvlogo.png" alt="">
-          </div>
-          <div class="box-details">
-            <h3 class="designation">Secondary</h3>
-            <h4 class="institute">RPVV SMV Delhi</h4>
-            <h5 class="duration">10 CGPA | (2016-2017)</h5>
-            <p class="description">Secured Merit Certificate in 10th from Rajkiya Pratibha Vikas Vidyalaya, Surajmal
-              Vihar Delhi</p>
-          </div>
-        </div>
-
-        <div class="education-divider">
-          <div class="education-traveller">
-            <i class="fas fa-train fa-lg"></i>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <img src="assets/rpvvlogo.png" alt="RPVV" class="company-logo">
+                <div>
+                  <h4>Secondary (X)</h4>
+                  <h5>RPVV Surajmal Vihar, Delhi</h5>
+                </div>
+              </div>
+              <span class="timeline-date">2016 - 2017</span>
+              <div class="timeline-badge">10 CGPA</div>
+              <p>Secured Merit Certificate in 10th from Rajkiya Pratibha Vikas Vidyalaya, Surajmal Vihar Delhi.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
-      <div class="socialSlideLeft">
-        <div class="socialStickyLeft">
-          <a href="https://linkedin.com/in/tyagibhavya">
-            <span>linkedin</span>
+      <div class="container">
+        <h2 class="section-subtitle reveal">What I've built</h2>
+        <h3 class="section-title reveal">Projects</h3>
+        <div class="projects-grid">
+          <a href="https://github.com/bhavyatyagi/React-Flask-Docker-Template" target="_blank" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/docker-template.jpg" alt="Flask-React-Docker Template">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>Flask-React-Docker Template</h4>
+              <p>Full-stack boilerplate with Docker</p>
+            </div>
           </a>
-          <a href="https://github.com/bhavyatyagi">
-            <span>github</span>
+          <a href="https://github.com/bhavyatyagi/visualization-dashboard" target="_blank" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/proj0.gif" alt="Data Visualization Dashboard">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>Visualization Dashboard</h4>
+              <p>Interactive data visualization tool</p>
+            </div>
           </a>
-          <a href="https://bhavya.hashnode.dev">
-            <span>blog</span>
+          <a href="https://github.com/bhavyatyagi/url-shortner" target="_blank" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/url-shortner.jpg" alt="URL Shortener">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>URL Shortener</h4>
+              <p>Custom URL shortening service</p>
+            </div>
+          </a>
+          <a href="./projects/Music-Player/index.html" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/proj1.gif" alt="Music Player">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>Music Player</h4>
+              <p>Web-based music player interface</p>
+            </div>
+          </a>
+          <a href="https://github.com/bhavyatyagi/toDoListApp" target="_blank" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/ToDos.jpg" alt="ToDos List App">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>ToDos List App</h4>
+              <p>Task management application</p>
+            </div>
+          </a>
+          <a href="https://bhavyatyagi.github.io" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/proj2.gif" alt="Web Portfolio">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>Web Portfolio</h4>
+              <p>This personal portfolio website</p>
+            </div>
+          </a>
+          <a href="./projects/Ping-Pong/index.html" class="project-card reveal">
+            <div class="project-image">
+              <img src="./assets/projects/proj3.gif" alt="Ping Pong Game">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <h4>Ping Pong Game</h4>
+              <p>Browser-based ping pong game</p>
+            </div>
           </a>
         </div>
       </div>
-
-      <div class="socialSlideRight">
-        <div class="socialStickyRight">
-          <a href="https://linkedin.com/in/tyagibhavya">
-            <span>linkedin</span>
-          </a>
-          <a href="https://github.com/bhavyatyagi">
-            <span>github</span>
-          </a>
-          <a href="https://bhavya.hashnode.dev">
-            <span>blog</span>
-          </a>
-        </div>
-      </div>
-      <h1 class="section-heading mb75px">
-        <span>
-          <i class="fas fa-microchip"></i>
-        </span>
-        <span>Projects</span>
-      </h1>
-
-      <div class="projects-display">
-        <!-- <div class="projects-images">
-          <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png" alt="">
-          <div class="projects-text">
-            <span>VStamps</span>
-          </div>
-        </div> -->
-        <div class="projects-images">
-          <a href="https://github.com/bhavyatyagi/React-Flask-Docker-Template">
-            <img src="./assets/projects/docker-template.jpg" alt="Flask-React-Docker Template">
-            <div class="projects-text">
-              <span>Flask-React-Docker Template</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <a href="https://github.com/bhavyatyagi/visualization-dashboard">
-            <img src="./assets/projects/proj0.gif" alt="Data Visualization Dashboard">
-            <div class="projects-text">
-              <span>Visualization Dashboard</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <a href="https://github.com/bhavyatyagi/url-shortner">
-            <img src="./assets/projects/url-shortner.jpg" alt="URL Shortner">
-            <div class="projects-text">
-              <span>URL Shortner</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <a href="./projects/Music-Player/index.html">
-            <img src="./assets/projects/proj1.gif" alt="Music Player Project Design">
-            <div class="projects-text">
-              <span>Music Player Project</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <a href="https://github.com/bhavyatyagi/toDoListApp">
-            <img src="./assets/projects/ToDos.jpg" alt="To Do Lists">
-            <div class="projects-text">
-              <span>ToDos List</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <a href="https://bhavyatyagi.github.io">
-            <img src="./assets/projects/proj2.gif" alt="Web-Potfolio Design">
-            <div class="projects-text">
-              <span>Web-Portfolio</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <a href="./projects/Ping-Pong/index.html">
-            <img src="./assets/projects/proj3.gif" alt="Ping-Pong Game Design">
-            <div class="projects-text">
-              <span>Ping Pong Game</span>
-            </div>
-          </a>
-        </div>
-        <div class="projects-images">
-          <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png" alt="">
-          <div class="projects-text">
-            <span>Coming Soon</span>
-          </div>
-        </div>
-
-      </div>
-
     </section>
 
+    <!-- Volunteering / Leadership Section -->
     <section id="volunteering">
-      <h1 class="section-heading mb75px">
-        <span>
-          <i class="fas fa-briefcase"></i>
-        </span>
-        <span>Position of Responsibility</span>
-      </h1>
-
-      <div class="timeline">
-
-        <div class="timeline-box from-left slide-in">
-          <div class="education-logo">
-            <img src="assets/luglogo.png" alt="">
+      <div class="container">
+        <h2 class="section-subtitle reveal">Giving back</h2>
+        <h3 class="section-title reveal">Leadership &amp; Responsibility</h3>
+        <div class="leadership-grid">
+          <div class="leadership-card reveal">
+            <div class="leadership-icon">
+              <img src="assets/luglogo.png" alt="Linux User Group">
+            </div>
+            <h4>Joint Secretary</h4>
+            <h5>Linux User Group</h5>
+            <span class="leadership-date">Jul 2020 - Sep 2022</span>
+            <p>Technical Society in Thapar Institute of Engineering and Technology, Patiala.</p>
           </div>
-          <div class="box-details">
-            <h3 class="designation">Joint Secretary</h3>
-            <h4 class="institute">Linux User Group</h4>
-            <h5 class="duration">(07/2020 - 09/2022)</h5>
-            <p class="description">Technical Society in Thapar Institute of Engineering and Technology, Patiala</p>
-          </div>
-        </div>
-        <div class="timeline-box from-right slide-in">
-          <div class="education-logo">
-            <img src="assets/ccslogo.png" alt="">
-          </div>
-          <div class="box-details">
-            <h3 class="designation">Team Member</h3>
-            <h4 class="institute">Creative Computing Society</h4>
-            <h5 class="duration">(07/2019 - 01/2022)</h5>
-            <p class="description">Technical Society in Thapar Institute of Engineering and Technology, Patiala</p>
-          </div>
-        </div>
-
-        <div class="timeline-divider">
-          <div class="timeline-traveller">
-            <i class="fas fa-fighter-jet fa-lg"></i>
+          <div class="leadership-card reveal">
+            <div class="leadership-icon">
+              <img src="assets/ccslogo.png" alt="Creative Computing Society">
+            </div>
+            <h4>Team Member</h4>
+            <h5>Creative Computing Society</h5>
+            <span class="leadership-date">Jul 2019 - Jan 2022</span>
+            <p>Technical Society in Thapar Institute of Engineering and Technology, Patiala.</p>
           </div>
         </div>
       </div>
-
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-      <h1 class="contact-heading section-heading mb75px ">
-        <span>
-          <i><i class="fas fa-id-card"></i></i>
-        </span>
-        <span>Contact</span>
-      </h1>
-      <div class="contact-display">
-        <div class="form">
-          <!-- Changed action from ./index.html to ./ for github requirements -->
-          <form onsubmit="window.location.reload();" class="contact-form" method="post">
-            <input type="text" name="" id="required_name" placeholder="Full Name *" required>
-            <input type="email" name="" id="required_stuff" placeholder="Email *" required>
-            <textarea placeholder="Any Message ?" name="name"></textarea>
-            <button type="submit" name="button">SEND MESSAGE</button>
+      <div class="container">
+        <h2 class="section-subtitle reveal">Let's connect</h2>
+        <h3 class="section-title reveal">Get In Touch</h3>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-description">
+              I'm always open to new opportunities and collaborations. Feel free to reach out through any of these channels.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Delhi, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:bhavyatyagi16@gmail.com">bhavyatyagi16@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>8908900070</span>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="https://www.linkedin.com/in/bhavya-tyagi-443619149/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/bhavyatyagi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.codechef.com/users/bhavyatyagi16" target="_blank" aria-label="CodeChef"><i class="fas fa-code"></i></a>
+              <a href="https://www.facebook.com/bhavytyagi16" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.quora.com/profile/Bhavya-Tyagi-36" target="_blank" aria-label="Quora"><i class="fab fa-quora"></i></a>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
           </form>
         </div>
-        <div class="add-info">
-          <div class="touch">
-            <h3 class="contact-headings">Get in Touch</h3>
-            <p>
-              You can contact me through social media or through the options given below.
-            </p>
-          </div>
-          <div class="Where">
-            <h3 class="contact-headings">Where can you find me ?</h3>
-            <p>
-              <span>
-                <i class="fas fa-map-marker-alt"></i>
-              </span>
-              <span>Delhi, India</span>
-            </p>
-            <p>
-              <span>
-                <i class="fas fa-mobile-alt"></i>
-              </span>
-              <span>8908900070</span>
-            </p>
-            <p>
-              <span>
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span>bhavyatyagi16@gmail.com</span>
-            </p>
-          </div>
-        </div>
       </div>
     </section>
-    <footer>
-      <div class="footer-social">
 
-
-        <ul class="social text-center slowitdown">
-          <li><a target="_blank" href="https://www.linkedin.com/in/bhavya-tyagi-443619149/"><i
-                class="fab fa-linkedin-in"></i></a></li>
-          <li><a target="_blank" href="https://www.codechef.com/users/bhavyatyagi16"><i
-                class="fas fa-code slowitdown "></i></a></li>
-          <li><a target="_blank" href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope slowitdown "></i></a>
-          </li>
-          <li><a target="_blank" href="https://www.facebook.com/bhavytyagi16"><i
-                class="fab fa-facebook-f slowitdown "></i></a></li>
-          <li><a target="_blank" href="https://www.quora.com/profile/Bhavya-Tyagi-36"><i
-                class="fab fa-quora slowitdown "></i></a></li>
-
-        </ul>
-      </div>
-      <div class="goodbye">
-        <h3>&copy; 2020-2022 Bhavya Tyagi</h3>
-      </div>
-    </footer>
   </main>
-  <script src="./script.js">
-  </script>
-</body>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <img src="./assets/myimage1.jpg" alt="BT" class="footer-avatar">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/bhavya-tyagi-443619149/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/bhavyatyagi" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2020 - 2025 Bhavya Tyagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
 </html>

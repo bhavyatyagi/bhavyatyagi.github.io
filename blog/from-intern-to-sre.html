@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>From Intern to SRE | Bhavya Tyagi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reflecting on my journey from a college student to building infrastructure tools at LinkedIn.">
+  <link rel="icon" type="image/jpeg" href="../assets/myimage1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/49a924637f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./blog.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="../" class="nav-logo">
+        <img src="../assets/myimage1.jpg" alt="BT" class="nav-avatar">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../">Home</a></li>
+        <li><a href="./">Blog</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="reading-progress" id="readingProgress"></div>
+  </nav>
+
+  <main>
+
+    <!-- Article Header -->
+    <article class="article">
+      <header class="article-header">
+        <div class="container container-narrow">
+          <a href="./" class="back-link"><i class="fas fa-arrow-left"></i> Back to blog</a>
+          <div class="post-meta">
+            <span class="post-tag">Career</span>
+            <span class="post-date"><i class="far fa-calendar-alt"></i> Feb 11, 2025</span>
+            <span class="post-read"><i class="far fa-clock"></i> 8 min read</span>
+          </div>
+          <h1>From Intern to SRE: Lessons I Learned Building Reliable Systems at Scale</h1>
+          <p class="article-subtitle">
+            Reflecting on my journey from a college student writing spaghetti code to
+            building infrastructure tools at LinkedIn. The mistakes, the "aha" moments,
+            and the principles that changed how I think about software.
+          </p>
+          <div class="article-author">
+            <img src="../assets/myimage1.jpg" alt="Bhavya Tyagi">
+            <div>
+              <span class="author-name">Bhavya Tyagi</span>
+              <span class="author-role">Software Engineer &middot; Delhi, India</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Body -->
+      <div class="article-body">
+        <div class="container container-narrow">
+
+          <p class="article-lead">
+            Three years ago, I was a college student at Thapar Institute submitting my first pull
+            request at a real company. Today, I think in terms of SLOs, error budgets, and
+            distributed system failure modes. Here's the story of that transformation, and the
+            hard-won lessons that came with it.
+          </p>
+
+          <h2>The Beginning: When "It Works on My Machine" Was Good Enough</h2>
+
+          <p>
+            My first real coding experience beyond college assignments was at <strong>Fint</strong>,
+            a fintech startup where I joined as a backend developer intern. I was handed a Node.js
+            codebase, a MongoDB Atlas connection string, and a Slack channel. That was my onboarding.
+          </p>
+
+          <p>
+            At a startup, you learn fast because you have to. There's no senior engineer reviewing
+            your code for three days. You push, you break things, you fix them at 11 PM, and you
+            learn why input validation matters the hard way.
+          </p>
+
+          <blockquote>
+            <p>
+              "The best way to learn how systems fail is to be the person who accidentally
+              made them fail."
+            </p>
+          </blockquote>
+
+          <p>
+            I built APIs, designed database schemas, and learned that the gap between "working code"
+            and "production-ready code" is approximately the width of the Grand Canyon.
+          </p>
+
+          <h2>The Research Detour: When I Tried to Predict the Weather</h2>
+
+          <p>
+            Alongside my startup work, I was doing a research internship at <strong>IIT Indore</strong>,
+            building CNN models for solar wind prediction. This was a completely different world &mdash;
+            instead of shipping features, I was reading papers, tuning hyperparameters, and learning
+            that machine learning is 90% data cleaning and 10% feeling clever.
+          </p>
+
+          <p>
+            But this experience taught me something crucial that would serve me well in SRE:
+            <strong>the importance of metrics and measurement</strong>. In ML, you live and die by
+            your evaluation metrics. You can't just "feel" like your model is better &mdash; you need
+            precision, recall, F1 scores. This mindset of rigorous measurement would become central
+            to my SRE work later.
+          </p>
+
+          <h2>TigerGraph: Learning to Explain Technical Concepts</h2>
+
+          <p>
+            My stint as a Developer Advocate at <strong>TigerGraph</strong> through the GitHub
+            Externship Program was unique. Instead of just writing code, I had to <em>explain</em>
+            code. I built a video recommendation system and analytics dashboard, but the real
+            challenge was making graph databases accessible to developers who'd never used one.
+          </p>
+
+          <p>
+            This taught me that <strong>communication is a technical skill</strong>. The ability
+            to write clear documentation, explain system architecture in a design doc, or break
+            down a complex incident during a postmortem &mdash; these are not soft skills.
+            They're engineering skills.
+          </p>
+
+          <h2>LinkedIn: Where Everything Changed</h2>
+
+          <p>
+            When I joined <strong>LinkedIn's Infrastructure - Tools SRE team</strong> as an
+            intern in the summer of 2022, I entered a different universe. This was a company
+            serving hundreds of millions of users, where a single misconfiguartion could cascade
+            into a site-wide incident.
+          </p>
+
+          <p>
+            My project was building an internal tool to reduce operational toil. Sounds simple
+            enough, right? But at LinkedIn's scale, "reducing toil" means understanding:
+          </p>
+
+          <ul>
+            <li>How dozens of microservices interact with each other</li>
+            <li>Why that one cron job from 2018 is actually keeping three systems alive</li>
+            <li>The difference between a 99.9% and 99.99% availability target (hint: it's about 8 hours of downtime per year)</li>
+            <li>Why you should <em>never</em> deploy on a Friday</li>
+          </ul>
+
+          <h2>The Five Principles That Stuck</h2>
+
+          <p>
+            Looking back across all four of these experiences, here are the principles that
+            fundamentally changed how I approach software engineering:
+          </p>
+
+          <h3>1. Everything Fails. Design for It.</h3>
+
+          <p>
+            At a startup, you build for the happy path. At scale, you build for the unhappy one.
+            Networks partition. Disks fill up. That API you depend on? It will go down at
+            2 AM on a Saturday. The question isn't <em>if</em>, but <em>when</em>, and whether
+            your system degrades gracefully or falls over like a house of cards.
+          </p>
+
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-lang">python</span>
+              <span class="code-title">The Retry Pattern</span>
+            </div>
+<pre><code>import time
+from functools import wraps
+
+def retry(max_attempts=3, backoff_factor=2):
+    """Exponential backoff retry decorator."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(max_attempts):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    if attempt == max_attempts - 1:
+                        raise
+                    wait = backoff_factor ** attempt
+                    logger.warning(
+                        f"Attempt {attempt+1} failed: {e}. "
+                        f"Retrying in {wait}s..."
+                    )
+                    time.sleep(wait)
+        return wrapper
+    return decorator</code></pre>
+          </div>
+
+          <h3>2. Observability Is Not Optional</h3>
+
+          <p>
+            You can't fix what you can't see. Before LinkedIn, I thought "logging" meant
+            sprinkling <code>print()</code> statements around. Now I think in terms of the
+            three pillars: <strong>metrics</strong>, <strong>logs</strong>, and <strong>traces</strong>.
+            If your system doesn't have all three, you're flying blind.
+          </p>
+
+          <h3>3. Automate the Toil, Keep the Thinking</h3>
+
+          <p>
+            Toil is any work that is manual, repetitive, automatable, and devoid of lasting value.
+            Every minute spent on toil is a minute not spent on engineering. My entire project at
+            LinkedIn was about this: taking repetitive operational tasks and turning them into
+            self-service tools. The goal isn't to remove humans from the loop &mdash; it's to
+            free them up for the work that actually requires human judgment.
+          </p>
+
+          <h3>4. Incidents Are Learning Opportunities</h3>
+
+          <p>
+            The blameless postmortem culture at LinkedIn was eye-opening. When something breaks,
+            the question is never "whose fault is it?" but "what can we learn from this?" Every
+            incident is a gift &mdash; it's your system telling you where it's weak. The best
+            engineering teams I've seen are the ones that treat failure as data.
+          </p>
+
+          <h3>5. Simple Beats Clever, Every Single Time</h3>
+
+          <p>
+            In college, I wanted to write the most elegant, abstract, design-pattern-heavy code
+            possible. In production, I've learned that the best code is the code your on-call
+            engineer can understand at 3 AM with one eye open. Boring technology is beautiful
+            technology.
+          </p>
+
+          <blockquote>
+            <p>
+              "Debugging is twice as hard as writing the code in the first place. Therefore,
+              if you write the code as cleverly as possible, you are, by definition, not smart
+              enough to debug it."
+            </p>
+            <cite>&mdash; Brian Kernighan</cite>
+          </blockquote>
+
+          <h2>What's Next</h2>
+
+          <p>
+            The journey from intern to engineer is not about learning specific technologies &mdash;
+            those change every few years anyway. It's about developing an engineering mindset:
+            thinking in systems, measuring what matters, communicating clearly, and always, always
+            planning for failure.
+          </p>
+
+          <p>
+            I'm still early in my career, and I know the lessons ahead will be just as
+            transformative as the ones behind. But if there's one thing I'd tell my past self,
+            it's this: <strong>don't be afraid to break things</strong>. That's how you learn
+            how they work.
+          </p>
+
+          <div class="article-divider"></div>
+
+          <p>
+            <em>
+              If this resonated with you, feel free to connect with me on
+              <a href="https://www.linkedin.com/in/bhavya-tyagi-443619149/" target="_blank">LinkedIn</a>.
+              I'd love to hear about your own journey.
+            </em>
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Article Footer -->
+      <div class="article-footer">
+        <div class="container container-narrow">
+          <div class="article-tags">
+            <span class="article-tag">SRE</span>
+            <span class="article-tag">Career</span>
+            <span class="article-tag">LinkedIn</span>
+            <span class="article-tag">Software Engineering</span>
+          </div>
+          <div class="article-share">
+            <span>Share this article:</span>
+            <div class="share-links">
+              <a href="https://twitter.com/intent/tweet?text=From%20Intern%20to%20SRE&url=" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- More Posts -->
+    <section class="more-posts">
+      <div class="container container-narrow">
+        <h3>More from the blog</h3>
+        <a href="./" class="btn-primary">
+          <span>View all posts</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <img src="../assets/myimage1.jpg" alt="BT" class="footer-avatar">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/bhavya-tyagi-443619149/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/bhavyatyagi" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2020 - 2025 Bhavya Tyagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    // Reading progress bar
+    const readingProgress = document.getElementById('readingProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      readingProgress.style.width = percent + '%';
+    });
+  </script>
+</body>
+</html>

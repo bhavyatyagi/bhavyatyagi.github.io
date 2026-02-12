@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog | Bhavya Tyagi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thoughts on software engineering, tech, and life by Bhavya Tyagi.">
+  <link rel="icon" type="image/jpeg" href="../assets/myimage1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/49a924637f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./blog.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="../" class="nav-logo">
+        <img src="../assets/myimage1.jpg" alt="BT" class="nav-avatar">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../">Home</a></li>
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="../#contact">Contact</a></li>
+        <li><a href="./" class="nav-blog-link active">Blog <i class="fas fa-pen-nib fa-xs"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <header class="blog-hero">
+    <div class="blog-hero-bg"></div>
+    <div class="container">
+      <div class="blog-hero-content">
+        <span class="blog-hero-label">The Blog</span>
+        <h1>Thoughts, stories &amp;<br>ideas worth sharing</h1>
+        <p>Writing about software engineering, tech explorations, and lessons learned along the way.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Featured Post -->
+    <section class="blog-featured">
+      <div class="container">
+        <a href="./from-intern-to-sre.html" class="featured-card">
+          <div class="featured-image">
+            <div class="featured-image-placeholder">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <div class="featured-badge">Featured</div>
+          </div>
+          <div class="featured-content">
+            <div class="post-meta">
+              <span class="post-tag">Career</span>
+              <span class="post-date"><i class="far fa-calendar-alt"></i> Feb 11, 2025</span>
+              <span class="post-read"><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h2>From Intern to SRE: Lessons I Learned Building Reliable Systems at Scale</h2>
+            <p>
+              Reflecting on my journey from a college student writing spaghetti code to
+              building infrastructure tools at LinkedIn. The mistakes, the "aha" moments,
+              and the principles that changed how I think about software.
+            </p>
+            <div class="featured-author">
+              <img src="../assets/myimage1.jpg" alt="Bhavya Tyagi">
+              <div>
+                <span class="author-name">Bhavya Tyagi</span>
+                <span class="author-role">Software Engineer</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="blog-posts">
+      <div class="container">
+        <div class="posts-header">
+          <h2>All Posts</h2>
+          <div class="posts-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="career">Career</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="tutorial">Tutorial</button>
+          </div>
+        </div>
+        <div class="posts-grid">
+
+          <!-- Post 1 (the actual post) -->
+          <a href="./from-intern-to-sre.html" class="post-card" data-category="career">
+            <div class="post-card-image">
+              <div class="post-card-image-placeholder" style="--hue: 250;">
+                <i class="fas fa-terminal"></i>
+              </div>
+            </div>
+            <div class="post-card-body">
+              <div class="post-meta">
+                <span class="post-tag">Career</span>
+                <span class="post-date">Feb 11, 2025</span>
+              </div>
+              <h3>From Intern to SRE: Lessons I Learned Building Reliable Systems at Scale</h3>
+              <p>Reflecting on my journey from college to building infrastructure tools at LinkedIn.</p>
+              <span class="post-read-more">Read article <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Placeholder: Coming Soon cards -->
+          <div class="post-card post-card-soon" data-category="tech">
+            <div class="post-card-image">
+              <div class="post-card-image-placeholder" style="--hue: 180;">
+                <i class="fas fa-docker"></i>
+              </div>
+            </div>
+            <div class="post-card-body">
+              <div class="post-meta">
+                <span class="post-tag tag-soon">Coming Soon</span>
+              </div>
+              <h3>Docker in Production: Patterns I Wish I Knew Earlier</h3>
+              <p>Practical Docker patterns for real-world deployments beyond the tutorials.</p>
+            </div>
+          </div>
+
+          <div class="post-card post-card-soon" data-category="tutorial">
+            <div class="post-card-image">
+              <div class="post-card-image-placeholder" style="--hue: 320;">
+                <i class="fas fa-brain"></i>
+              </div>
+            </div>
+            <div class="post-card-body">
+              <div class="post-meta">
+                <span class="post-tag tag-soon">Coming Soon</span>
+              </div>
+              <h3>Building a Weather Prediction CNN From Scratch</h3>
+              <p>A deep dive into the AI/ML model I built during my research internship at IIT Indore.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <img src="../assets/myimage1.jpg" alt="BT" class="footer-avatar">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/bhavya-tyagi-443619149/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/bhavyatyagi" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:bhavyatyagi16@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2020 - 2025 Bhavya Tyagi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Filter buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const postCards = document.querySelectorAll('.post-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        postCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+            card.style.animation = 'fadeUp 0.4s ease forwards';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
